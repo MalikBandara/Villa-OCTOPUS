@@ -138,7 +138,7 @@
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), 
-                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&amp;fit=crop&amp;w=1920&amp;q=80');
+                        url('https://blogger.googleusercontent.com/img/a/AVvXsEgD2NGvF3qfth48OT0P2cjNALDuQlhLBC_AlHMCSQSxDPdWlMzncnPfitiMF6-H89o4o2Ad52FiNhBJTU0gdc14H7TXRyish0MOvW8xQyBTkJ7MeqC1D5QEWiU0ylLmO0cC89iG0DyOnYq3Zeb0DMabezu8YS1OktzgfQuZ9zIJkqdh8Nnsx7MD_aSRj0M=w1920');
             background-size: cover; 
             background-position: center;
             display: flex; 
@@ -160,6 +160,29 @@
             font-size: 1.5rem;
             margin-top: 20px;
             letter-spacing: 3px;
+        }
+
+        .cta-button {
+            margin-top: 35px;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background: white;
+            color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         section { 
@@ -239,6 +262,97 @@
         }
 
         /* CONTACT SECTION */
+        .dark-section {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 80px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #8bb174; /* Green accent from example */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .section-header p {
+            color: #aaa;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .facility-card {
+            background: #2a2a2a;
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .facility-content {
+            padding: 30px;
+        }
+
+        .facility-title {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            border: 1px solid white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .details-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 15px;
+            color: #ccc;
+        }
+
+        .details-list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .details-list li::before {
+            content: "•";
+            color: #8bb174;
+            position: absolute;
+            left: 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .info-block h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
         .contact-container {
             display: flex;
             gap: 60px;
@@ -288,6 +402,105 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+
+        /* LOCATION CARDS */
+        .location-card {
+            height: 350px;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 30px;
+            text-decoration: none;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+
+        .location-pill {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 10px 25px;
+            border-radius: 50px;
+            color: #1a3a3a;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .location-details {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .location-time {
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+
+        .location-dist {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* TRANSPORT ICONS */
+        .transport-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .transport-card {
+            background: white;
+            border-radius: 20px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 15px;
+        }
+
+        .transport-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .transport-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         /* FOOTER */
@@ -374,6 +587,7 @@
             <a class='logo' href='#home'>OCTOPUS</a>
             <div class='nav-links'>
                 <a href='#home'>Home</a>
+                <a href='#about'>About</a>
                 <a href='#rooms'>Rooms</a>
                 <a href='#experience'>Experience</a>
                 <a href='#contact'>Contact</a>
@@ -388,6 +602,7 @@
 
     <div class='mobile-overlay' id='mobileNav'>
         <a href='#home'>Home</a>
+        <a href='#about'>About</a>
         <a href='#rooms'>Rooms</a>
         <a href='#experience'>Experience</a>
         <a href='#contact'>Contact</a>
@@ -395,8 +610,20 @@
 
     <div class='hero' id='home'>
         <h1>VILLA OCTOPUS</h1>
-        <p>Luxury Lagoon Sanctuary</p>
+        <p>Newly Reimagined. Steps from the Sea.</p>
+        <a class='cta-button' href='#contact'>Book Your Stay</a>
     </div>
+
+    <section id='about' style='padding: 40px 5%;'>
+        <h2 class='room-title' style='text-align: center; margin-bottom: 10px;'>ABOUT US</h2>
+        <div style='text-align: center; margin-bottom: 20px;'>
+            <img alt='Decoration' src='https://blogger.googleusercontent.com/img/a/AVvXsEg6qE1yZbklTJFxIvxAekECvLLdnZHAFnkOhGV7TRx_jdDB5UMpSqxkdoTlQVw0t3W5bgysuUR5Y3O1W5KKlFJF3s_kqSXfR382TSShTynzhjzIzdrr3annNCwzGykMHbS_vXFIsYFxMv1wAj1OTTCyfpoxxe-tqwnBaHuCvk-8UsR0CFtJujaIjgGMhM8' style='max-width: 450px; width: 80%; opacity: 0.9;'/>
+        </div>
+        <div style='max-width: 900px; margin: 0 auto; text-align: center; line-height: 1.6; font-size: 1.15rem;'>
+            <p style='margin-bottom: 20px;'>Welcome to the newly reimagined Villa Octopus, your premier lagoon sanctuary where modern luxury meets the tranquil beauty of the Sri Lankan coast. Recently remodeled to offer contemporary comfort, our villa provides a sophisticated yet serene escape just steps away from the refreshing sea breeze.</p>
+            <p>Whether you are lounging in our stylish suites or enjoying the lush tropical gardens, we invite you to experience a new standard of seaside living.</p>
+        </div>
+    </section>
 
     <section id='rooms'>
         <div class='room-container'>
@@ -416,12 +643,73 @@
             </div>
             <div class='room-visuals'>
                 <div class='secondary-images'>
-                    <img alt='Suite detail' src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&amp;fit=crop&amp;w=400&amp;q=80'/>
-                    <img alt='Suite detail' src='https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&amp;fit=crop&amp;w=400&amp;q=80'/>
-                    <img alt='Suite detail' src='https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&amp;fit=crop&amp;w=400&amp;q=80'/>
+                    <img alt='Suite detail' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKlfWR4gA9Q-sgEheM-6v_i-yRO-fEFn0WDPv43XQoWm25RLuoynKg1oYQIoTsnUx4GltwLon0U09rmzhwUYIndhgozH8XKXRBWfryXQeUR7qMWP1Tj4lPP2gNjb5Ufp4YH0-NYtIF8UdEuASRBBxIqdPBm60Jl7INzB6h3xbBaWO56p_X0VBAu066s90/s320/WhatsApp%20Image%202026-01-23%20at%206.46.25%20PM%20(1).jpeg'/>
+                    <img alt='Suite detail' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQ6gEFeBFdGUVs1R2vxGOtHRP0QZxhQAZBWfO12mLsWhIzNDJMxqfNH0vRUrSk4-B_cEjX8DuSiMbfTgOkMEPBhTawwcw-HrL5bUySWrmxGRUogRLwjcUC6xOZ39wxM85y94q2T-pp_Pflfot9RJInNgfc9YOChK3fW3FVm18rfD2T_dFX2mkeYSt4ZGA/s320/WhatsApp%20Image%202026-01-23%20at%206.46.25%20PM%20(2).jpeg'/>
+                    <img alt='Suite detail' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrupzeU1astZfuUMNLiBP8J_MHCNTqYM9COcbGT4IyGZb-UkjM3paqJe3XlrUjR28RMDmndHXRAfLBcN9xCTATJSnH864iitX3g9xAyFZfoxWlDVK-3rucTTtXEVJki1HAId9blQp824Me0mRAz3LBHs31T91XLuJBEZMxmApNZtXI54U7E0KPkzjSnkk/s320/WhatsApp%20Image%202026-01-23%20at%206.46.26%20PM.jpeg'/>
                 </div>
                 <div class='main-image-wrapper'>
-                    <img alt='Lagoon Suite' src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=800&amp;q=80'/>
+                    <img alt='Lagoon Suite' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnCxaI_-m52tfQ-yRiO8QRiqBo5dILaMZkY56cE1RztHCmnnHEMeOAmleM-F-ulYevVXCyW2vo7A_vFHlC52MgCDW0e9GfbAIVz1STjRENwexPYD8idCeg_BN6y8pC3ya5JnimXPsVGdk7cMe9s2ny5esfuHrY7-iXi0a2l4Wnk7jFT3ro4if_fTkmQ5U/s320/WhatsApp%20Image%202026-01-23%20at%206.46.27%20PM%20(1).jpeg'/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id='location' style='background: #ffffff; position: relative; overflow: hidden;'>
+        <!-- Octopus Tentacle Watermark -->
+        <div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.03; font-size: 60rem; color: #2c2c2c; pointer-events: none; user-select: none;'>🐙</div>
+        
+        <h2 class='room-title' style='text-align: center; color: #1a3a3a; margin-bottom: 15px; position: relative; z-index: 1;'>LOCATION &amp; ACCESSIBILITY</h2>
+        <p style='text-align: center; max-width: 700px; margin: 0 auto 60px auto; color: #2c2c2c; opacity: 0.7; font-size: 1rem; position: relative; z-index: 1;'>Conveniently located in Maggona, near St. Mary's Church</p>
+        
+        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1;'>
+            <!-- Airport -->
+            <div class='location-card' style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEjvEeFeYTNKLNxkhKux_P2fVLMeWnH46BGQxmMi6bhrKUsrLqZ3k1I0UaYaBoM0Xh4CQZ3DRIzqTkc4ngttUvvYSk61xJpcqGx4_oEW444FWFdOizDlF74QuSKYHfa3ldbU0BtTCCiJcuPOwBklN51nW9iJEqXCXGHYm5ImiIkZluXYq1OBBnkJ4r-KPOk");'>
+                <div class='location-pill'>From Airport (BIA)</div>
+                <div class='location-details'>
+                    <div class='location-time'>1 hr 25 min</div>
+                    <div class='location-dist'>84 km via E01</div>
+                </div>
+            </div>
+            
+            <!-- Galle Fort -->
+            <div class='location-card' style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEgB_RSb9vY8WQya5o8xbvQdx-FyHqHt8PCag7fGYaU2cM9HJiVgnboiyAphKD3XMRvsABYVQxW7gk7TWQyG5TW0ryo4h4eUXt_RhjUat63AHQFGbd-IXNiDOgTUU8MstRw5zaCL-09hNsS6DemYZPNryQUBiYW4jTGUlu5BsqXylU-0GY3wl2iR74sL5Xk");'>
+                <div class='location-pill'>To Galle Fort</div>
+                <div class='location-details'>
+                    <div class='location-time'>1 hr 5 min</div>
+                    <div class='location-dist'>65 km via E01</div>
+                </div>
+            </div>
+            
+            <!-- Bentota Beach -->
+            <div class='location-card' style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEjTTA05_P7vO39N_afQ11HSbAImJAWUJhv1vWoDmTYElZLq3jcg-qQqyyFosFkKG_IO_cTIwrm9VkPnhEOVaDOWkcF8VbXyqD95NBlAbpHjmCz6TE4aFUd5Y7zalZ4EG9c8pTF5ykMnvPeELy_BI2gMBhBRnZlcNXA9MNcEpwScK7A7n1O4Bz9echGTCT0");'>
+                <div class='location-pill'>To Bentota Beach</div>
+                <div class='location-details'>
+                    <div class='location-time'>15 min</div>
+                    <div class='location-dist'>10 km</div>
+                </div>
+            </div>
+            
+            <!-- Kalawana -->
+            <div class='location-card' style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEi8h-c8kYSIC0oft4q8qpNJZRszcOvYL3YThF_bjpPciz90nN15lXn8KXn0RVhcoxX7L-YxfuB7GGD9vzSdBXqyynxN16_wz6ESFTZHvWbMXawm6rKi77K2_TRSC2s1U6_ROPgvKcFR5xOqAm3oMFtwaOWFUY1o6zyWDu-lJB2bI1JhNdz5jVNwRLD6Bk0");'>
+                <div class='location-pill'>To Kalawana</div>
+                <div class='location-details'>
+                    <div class='location-time'>1 hr 45 min</div>
+                    <div class='location-dist'>65 km</div>
+                </div>
+            </div>
+        </div>
+        
+        <div style='text-align: center; margin-top: 60px; position: relative; z-index: 1;'>
+            <p style='color: #1a3a3a; font-weight: bold; margin-bottom: 30px; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; opacity: 0.8;'>Transport Services Available</p>
+            <div class='transport-grid'>
+                <div class='transport-card' title='PickMe'>
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEj6MEe7n-rllOtbHHsDJo3zO6o3Pn3AfkGL4BIJG0WYe9P48RFvm35Gj0eN4A9-wvZJKfE3gWpqLdB8hl4hxiUsHU-OON8El6x1sKJkNPgxkBVCVxEa9xbJFYW4xMhCBKrSiIA6SERr7lxwLTc-gXFJEkfiGOIG-aZqKBfo_Yc3IROjTkX7OVinM5_SAbo" alt="PickMe"/>
+                </div>
+                <div class='transport-card' title='Uber'>
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjq5xsV1o4rPMw1obtxAMO2Nf86gXByP61W20qVcY5R9u-ytNw9TU69_V9rXIBq0zLagG8zYz_wXCdrYqHzL-c-0bpAZBrA8_ZF2Ci9e5G67YU4Gze9J76_N5Gsku5r4pjWJR4_nYhtte16CURMaBitO3byOOPUXMW4I_P2MA5fimPXLEp0yvieMByDxyI" alt="Uber"/>
+                </div>
+                <div class='transport-card' title='HelaGo'>
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEikwS-laWGYb37NTofjFYCpjNViXzbYakuaz87kfLIjGufn-3oe7QJmelvZCo0JtdNds90vYxgc_qxhbjvQwWx8nslTY0gApf5gwgqlOHCaYh6CQiG4Ety12amV7Q1WeuPksBsbPnXKqbXUphcbKcChJIOppQQYKUqmPbCnaqou6LqY19DYQdw3H9TEX5s" alt="HelaGo"/>
                 </div>
             </div>
         </div>
