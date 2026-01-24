@@ -920,6 +920,16 @@
         .room-card-dark:hover .room-image-wrapper img {
             transform: scale(1.05);
         }
+        
+        /* Split view for dual images */
+        .room-image-wrapper.split-view {
+            display: flex;
+        }
+        .room-image-wrapper.split-view img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
         .room-content-dark {
             padding: 30px;
             flex-grow: 1;
@@ -1532,26 +1542,47 @@
         <div class='rooms-grid'>
              <!-- Card 1: Deluxe Double -->
              <div class='room-card-dark'>
-                 <div class='room-image-wrapper'>
-                    <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnCxaI_-m52tfQ-yRiO8QRiqBo5dILaMZkY56cE1RztHCmnnHEMeOAmleM-F-ulYevVXCyW2vo7A_vFHlC52MgCDW0e9GfbAIVz1STjRENwexPYD8idCeg_BN6y8pC3ya5JnimXPsVGdk7cMe9s2ny5esfuHrY7-iXi0a2l4Wnk7jFT3ro4if_fTkmQ5U/s600/WhatsApp%20Image%202026-01-23%20at%206.46.27%20PM%20(1).jpeg' alt='Deluxe Double Room'/>
+                 <div class='room-image-wrapper split-view'>
+                    <img src='https://blogger.googleusercontent.com/img/a/AVvXsEguFpzRrBuiQV-Xsglai0PLcQUAz2UN7m2NxD01XkOvbRBlBINjaRJQx9vheN9w_YngE8mekKHYrkXCqppLB5QQh_Wvh-YgSyA5JojmfD9bomyAQQecLlwFVcNRMoJZ-9o523dTZUg-uMwaytnHDCcuIR8cQRNLp6AO_lLS4NSZ2ACH4oX8EM5V1R-8QBQ' alt='Deluxe Double Room'/>
+                    <img src='https://blogger.googleusercontent.com/img/a/AVvXsEhyuqdNeIhIL96uo0_Ug6cCShNO7yt7lgocTkW1PjEudzTIsQPMrdvXtG-E_y8skqRIZRhB3Ht7f-dkdmiuyTdPYQUKuH7Mt9-_jGLslaCQheOW_rMOr9YC4gMNUKSkLTtQgTJCFXhQGdNKEIqbrKbhJZWhOtNuooyH7Vj4JFuj45pXp5M6MaM9At92P3A' alt='Attached Bathroom'/>
                  </div>
                  <div class='room-content-dark'>
                      <h3 class='room-title-dark'>DELUXE DOUBLE ROOM</h3>
-                     <div class='amenities-list-dark'>
+                     <div class='amenities-list-dark' style='flex-wrap: wrap; gap: 15px;'>
+                         <!-- Air Condition -->
                          <div class='amenity-item-dark' title='Air Condition'>
-                            <!-- Air Con Icon -->
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
                             <span>A/C</span>
                          </div>
+                         <!-- Television -->
+                         <div class='amenity-item-dark' title='Television'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                            <span>TV</span>
+                         </div>
+                         <!-- Attached Bathroom -->
+                         <div class='amenity-item-dark' title='Attached Bathroom'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21h6v-2a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2zm2-2v-4a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v4M4 12V6a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v6M4 12h16"/></svg>
+                            <span>Bath</span>
+                         </div>
+                         <!-- Hot Water -->
                          <div class='amenity-item-dark' title='Hot Water'>
-                            <!-- Hot Water/Drop Icon -->
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.74 5.88a7.81 7.81 0 1 1-11.48 0z"/></svg>
                             <span>Hot Water</span>
                          </div>
-                         <div class='amenity-item-dark' title='Television'>
-                            <!-- TV Icon -->
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-                            <span>TV</span>
+                         <!-- WiFi -->
+                         <div class='amenity-item-dark' title='WiFi'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+                            <span>Wifi</span>
+                         </div>
+                         <!-- View -->
+                         <div class='amenity-item-dark' title='Scenic View'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.778 19.778A10.512 10.512 0 0 1 12 21c-5.207 0-9.66-3.793-10.778-9C2.34 6.793 6.793 3 12 3c1.78 0 3.473.447 4.978 1.25"></path><path d="M21 21l-4.22-4.22"></path></svg>
+                            <span>View</span>
+                         </div>
+                         <!-- Kitchen -->
+                         <div class='amenity-item-dark' title='Kitchen Facilities'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M2 16h20M4 12h16M4 8h16M2 4h20"/></svg>
+                            <span>Kitchen</span>
                          </div>
                      </div>
                      <div class='room-footer-dark'>
@@ -1561,25 +1592,48 @@
                  </div>
              </div>
 
-             <!-- Card 2: Family Suite (Example Wrapper for additional cards) -->
+             <!-- Card 2: Deluxe Double (Reproduced for second card as requested) -->
              <div class='room-card-dark'>
                  <div class='room-image-wrapper'>
-                    <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKlfWR4gA9Q-sgEheM-6v_i-yRO-fEFn0WDPv43XQoWm25RLuoynKg1oYQIoTsnUx4GltwLon0U09rmzhwUYIndhgozH8XKXRBWfryXQeUR7qMWP1Tj4lPP2gNjb5Ufp4YH0-NYtIF8UdEuASRBBxIqdPBm60Jl7INzB6h3xbBaWO56p_X0VBAu066s90/s600/WhatsApp%20Image%202026-01-23%20at%206.46.25%20PM%20(1).jpeg' alt='Family Suite'/>
+                    <img src='https://blogger.googleusercontent.com/img/a/AVvXsEjeISmwOYn3ZleD5LpJfaXFEydaH-tHoqPjv5FMt4GFFYevJ-cGvUdjBk0BcCpvtvddwXH535JBujr94CmSBuklrv_4-z2RsQWViV3eZDH4WovfiJMxcCVgbIjgRo5FLNDNLJB3huTtXzpfnzXob2hvSeVk_nl8_kkseagwyik-iV9eXcdAFpnsJ9bQXwE' alt='Deluxe Double Room'/>
                  </div>
                  <div class='room-content-dark'>
-                     <h3 class='room-title-dark'>LAGOON FAMILY SUITE</h3>
-                     <div class='amenities-list-dark'>
-                         <div class='amenity-item-dark'>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
-                            <span>WiFi</span>
+                     <h3 class='room-title-dark'>DELUXE DOUBLE ROOM</h3>
+                     <div class='amenities-list-dark' style='flex-wrap: wrap; gap: 15px;'>
+                         <!-- Air Condition -->
+                         <div class='amenity-item-dark' title='Air Condition'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+                            <span>A/C</span>
                          </div>
-                         <div class='amenity-item-dark'>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                         <!-- Television -->
+                         <div class='amenity-item-dark' title='Television'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                            <span>TV</span>
+                         </div>
+                         <!-- Attached Bathroom -->
+                         <div class='amenity-item-dark' title='Attached Bathroom'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21h6v-2a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2zm2-2v-4a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v4M4 12V6a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v6M4 12h16"/></svg>
+                            <span>Bath</span>
+                         </div>
+                         <!-- Hot Water -->
+                         <div class='amenity-item-dark' title='Hot Water'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.74 5.88a7.81 7.81 0 1 1-11.48 0z"/></svg>
+                            <span>Hot Water</span>
+                         </div>
+                         <!-- WiFi -->
+                         <div class='amenity-item-dark' title='WiFi'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+                            <span>Wifi</span>
+                         </div>
+                         <!-- View -->
+                         <div class='amenity-item-dark' title='Scenic View'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.778 19.778A10.512 10.512 0 0 1 12 21c-5.207 0-9.66-3.793-10.778-9C2.34 6.793 6.793 3 12 3c1.78 0 3.473.447 4.978 1.25"></path><path d="M21 21l-4.22-4.22"></path></svg>
                             <span>View</span>
                          </div>
-                         <div class='amenity-item-dark'>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2"/></svg>
-                            <span>Work</span>
+                         <!-- Kitchen -->
+                         <div class='amenity-item-dark' title='Kitchen Facilities'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M2 16h20M4 12h16M4 8h16M2 4h20"/></svg>
+                            <span>Kitchen</span>
                          </div>
                      </div>
                      <div class='room-footer-dark'>
