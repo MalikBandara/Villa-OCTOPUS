@@ -6,6 +6,7 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
     <title>Villa OCTOPUS | Luxury Sanctuary</title>
     <link href='https://fonts.googleapis.com/css2?family=Macondo&amp;display=swap' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&amp;display=swap' rel='stylesheet'/>
     
     <b:skin><![CDATA[
         /* --- GLOBAL STYLES --- */
@@ -578,6 +579,388 @@
         letter-spacing: 5px;
     }
 }
+
+        /* --- REDESIGNED CONTACT SECTION --- */
+        .contact-section-wrapper {
+            background: #ffffff;
+            padding: 120px 5%;
+            position: relative;
+        }
+
+        .contact-split {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 60px;
+            align-items: stretch;
+            min-height: 650px;
+        }
+
+        .contact-left {
+            flex: 1;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-right {
+            flex: 1;
+        }
+
+        .contact-header {
+            margin-bottom: 50px;
+        }
+
+        .contact-header h2 {
+            font-size: clamp(3rem, 5vw, 4rem);
+            color: #1a3a3a;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .contact-header p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-bottom: 50px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .icon-box {
+            width: 45px;
+            height: 45px;
+            background: #f4f8f8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a3a3a;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .contact-text-content {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            color: #1a3a3a;
+            line-height: 1.6;
+        }
+
+        .contact-text-content a {
+            color: #1a3a3a;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-text-content a:hover {
+            color: #5a9c9c;
+        }
+
+        .phone-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phone-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.75rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 80px;
+        }
+
+        /* CONTACT FORM */
+        .modern-form {
+            display: grid;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .styled-input {
+            width: 100%;
+            padding: 15px 0;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background: transparent;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            color: #1a3a3a;
+            transition: all 0.3s ease;
+        }
+
+        .styled-input:focus {
+            outline: none;
+            border-bottom-color: #1a3a3a;
+        }
+
+        .styled-input::placeholder {
+            color: #bbb;
+        }
+
+        .submit-btn {
+            background: #1a3a3a;
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            display: inline-block;
+            width: max-content;
+        }
+
+        .submit-btn:hover {
+            background: #2c4c4c;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(26, 58, 58, 0.2);
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .map-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(10%);
+        }
+
+        @media (max-width: 900px) {
+            .contact-split {
+                flex-direction: column;
+                gap: 50px;
+            }
+            .contact-right {
+                height: 400px;
+            }
+            .contact-section-wrapper {
+                padding: 60px 5%;
+            }
+            .contact-header h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        /* BOOKING SECTION */
+        .booking-section {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 100px 5%;
+        }
+
+        .booking-header {
+            margin-bottom: 60px;
+        }
+
+        .booking-header h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: #1a3a3a;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .booking-header p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        .booking-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .booking-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 50px;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            flex-basis: calc(33.333% - 40px);
+            min-width: 280px;
+            max-width: 350px;
+            height: 90px;
+        }
+
+        .booking-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: #ccc;
+        }
+
+        .book-via-text {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            color: #1a3a3a;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .platform-logo {
+            height: 30px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(0%);
+        }
+        
+        @media (max-width: 900px) {
+             .booking-card {
+                flex-basis: 100%;
+                max-width: 400px;
+             }
+        }
+
+        /* ROOMS SECTION STYLES */
+        #rooms-section {
+            display: none;
+            background-color: #f8f9fa;
+            padding: 100px 5% 80px;
+            min-height: 100vh;
+        }
+        .rooms-page-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .rooms-page-header h2 {
+            font-size: 3rem;
+            color: #1a3a3a;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .room-card-dark {
+            background: #2c2c2c; /* Dark Charcoal */
+            color: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .room-card-dark:hover {
+            transform: translateY(-10px);
+        }
+        .room-image-wrapper {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+        .room-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .room-card-dark:hover .room-image-wrapper img {
+            transform: scale(1.05);
+        }
+        .room-content-dark {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .room-title-dark {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .amenities-list-dark {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+        .amenity-item-dark {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .amenity-item-dark svg {
+            width: 18px;
+            height: 18px;
+            stroke: #4ade80; /* Light green accent */
+        }
+        .room-footer-dark {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
     ]]></b:skin>
 </head>
 <body>
@@ -586,9 +969,9 @@
         <nav>
             <a class='logo' href='#home'>OCTOPUS</a>
             <div class='nav-links'>
-                <a href='#home'>Home</a>
+                <a href='javascript:void(0)' onclick='showHome()'>Home</a>
                 <a href='#about'>About</a>
-                <a href='#rooms'>Rooms</a>
+                <a href='javascript:void(0)' onclick='showRooms()'>Rooms</a>
                 <a href='#experience'>Experience</a>
                 <a href='#contact'>Contact</a>
             </div>
@@ -601,13 +984,14 @@
     </header>
 
     <div class='mobile-overlay' id='mobileNav'>
-        <a href='#home'>Home</a>
+        <a href='javascript:void(0)' onclick='showHome()'>Home</a>
         <a href='#about'>About</a>
-        <a href='#rooms'>Rooms</a>
+        <a href='javascript:void(0)' onclick='showRooms()'>Rooms</a>
         <a href='#experience'>Experience</a>
         <a href='#contact'>Contact</a>
     </div>
 
+    <div id='home-view'>
     <div class='hero' id='home'>
         <h1>VILLA OCTOPUS</h1>
         <p>Newly Reimagined. Steps from the Sea.</p>
@@ -699,20 +1083,273 @@
             </div>
         </div>
         
-        <div style='text-align: center; margin-top: 60px; position: relative; z-index: 1;'>
-            <p style='color: #1a3a3a; font-weight: bold; margin-bottom: 30px; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; opacity: 0.8;'>Transport Services Available</p>
-            <div class='transport-grid'>
-                <div class='transport-card' title='PickMe'>
-                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEj6MEe7n-rllOtbHHsDJo3zO6o3Pn3AfkGL4BIJG0WYe9P48RFvm35Gj0eN4A9-wvZJKfE3gWpqLdB8hl4hxiUsHU-OON8El6x1sKJkNPgxkBVCVxEa9xbJFYW4xMhCBKrSiIA6SERr7lxwLTc-gXFJEkfiGOIG-aZqKBfo_Yc3IROjTkX7OVinM5_SAbo" alt="PickMe"/>
-                </div>
-                <div class='transport-card' title='Uber'>
-                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjq5xsV1o4rPMw1obtxAMO2Nf86gXByP61W20qVcY5R9u-ytNw9TU69_V9rXIBq0zLagG8zYz_wXCdrYqHzL-c-0bpAZBrA8_ZF2Ci9e5G67YU4Gze9J76_N5Gsku5r4pjWJR4_nYhtte16CURMaBitO3byOOPUXMW4I_P2MA5fimPXLEp0yvieMByDxyI" alt="Uber"/>
-                </div>
-                <div class='transport-card' title='HelaGo'>
-                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEikwS-laWGYb37NTofjFYCpjNViXzbYakuaz87kfLIjGufn-3oe7QJmelvZCo0JtdNds90vYxgc_qxhbjvQwWx8nslTY0gApf5gwgqlOHCaYh6CQiG4Ety12amV7Q1WeuPksBsbPnXKqbXUphcbKcChJIOppQQYKUqmPbCnaqou6LqY19DYQdw3H9TEX5s" alt="HelaGo"/>
+
+    </section>
+
+    <!-- EXPLORE NEIGHBORHOOD SECTION -->
+    <style>
+        #experience {
+            padding: 100px 5%;
+            background: #fdfbf7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .explore-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .explore-header h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .explore-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* SLIDER STYLES */
+        .explore-slider-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 60px; /* Space for arrows */
+        }
+
+        .explore-slider-viewport {
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            background: #fff;
+        }
+
+        .explore-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            cursor: grab;
+        }
+
+        .explore-track:active {
+            cursor: grabbing;
+        }
+
+        .explore-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .explore-slide-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .explore-slide-content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .explore-slide-content h3 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-family: 'Macondo', cursive;
+        }
+
+        .explore-slide-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* NAVIGATION ARROWS */
+        .explore-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px solid #1a3a3a; /* Dark teal/accent */
+            color: #1a3a3a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .explore-nav-btn:hover {
+            background: #1a3a3a;
+            color: #fff;
+        }
+
+        .explore-nav-btn.prev { left: 0; }
+        .explore-nav-btn.next { right: 0; }
+
+        /* DOTS */
+        .explore-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .explore-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .explore-dot.active {
+            background: #1a3a3a;
+        }
+
+        @media (max-width: 768px) {
+            .explore-slider-wrapper {
+                padding: 0;
+                max-width: 100%;
+            }
+            .explore-nav-btn {
+                display: none; /* Hide arrows on mobile, rely on swipe */
+            }
+            .explore-slide-image {
+                height: 250px;
+            }
+        }
+    </style>
+
+    <section id='experience'>
+        <div class='explore-header'>
+            <h2>Explore the Neighborhood</h2>
+            <p>Everything you need within minutes of your sanctuary.</p>
+        </div>
+
+        <div class='explore-slider-wrapper'>
+            <!-- ARROWS -->
+            <div class='explore-nav-btn prev' id='explorePrev' aria-label='Previous Slide'>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </div>
+            <div class='explore-nav-btn next' id='exploreNext' aria-label='Next Slide'>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+
+            <div class='explore-slider-viewport' id='exploreViewport'>
+                <div class='explore-track' id='exploreTrack'>
+                    <!-- SLIDE 1: Essentials -->
+                    <div class='explore-slide'>
+                        <img class='explore-slide-image' src='https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&amp;auto=format&amp;fit=crop&amp;q=60' alt='Daily Essentials' />
+                        <div class='explore-slide-content'>
+                            <h3>Daily Essentials</h3>
+                            <p>Food City Supermarket &amp; 3 ATMs located nearby in Maggona Town for your convenience.</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2: Health -->
+                    <div class='explore-slide'>
+                        <img class='explore-slide-image' src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&amp;auto=format&amp;fit=crop&amp;q=60' alt='Health &amp; Fitness' />
+                        <div class='explore-slide-content'>
+                            <h3>Health &amp; Fitness</h3>
+                            <p>Access to Medical Center and Gym. Stay active and healthy with easy access.</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3: Serenity -->
+                    <div class='explore-slide'>
+                        <img class='explore-slide-image' src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&amp;auto=format&amp;fit=crop&amp;q=60' alt='Sun &amp; Serenity' />
+                        <div class='explore-slide-content'>
+                            <h3>Sun &amp; Serenity</h3>
+                            <p>Yoga and Meditation at Uswella Beach and Kudawa. Pristine sands for perfect tranquility.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- DOTS -->
+            <div class='explore-dots' id='exploreDots'>
+                <!-- Injected via JS -->
+            </div>
         </div>
+        
+        <script>
+        //<![CDATA[
+        (function() {
+            const track = document.getElementById('exploreTrack');
+            const prevBtn = document.getElementById('explorePrev');
+            const nextBtn = document.getElementById('exploreNext');
+            const dotsContainer = document.getElementById('exploreDots');
+            const slides = document.querySelectorAll('.explore-slide');
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            // Create Dots
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.classList.add('explore-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.explore-dot');
+
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+            }
+
+            function goToSlide(index) {
+                if (index < 0) index = totalSlides - 1;
+                if (index >= totalSlides) index = 0;
+                currentIndex = index;
+                updateSlider();
+            }
+
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            // Swipe Functionality
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            track.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+
+            track.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+
+            function handleSwipe() {
+                const threshold = 50;
+                if (touchStartX - touchEndX > threshold) {
+                    goToSlide(currentIndex + 1); // Swipe Left -> Next
+                }
+                if (touchEndX - touchStartX > threshold) {
+                    goToSlide(currentIndex - 1); // Swipe Right -> Prev
+                }
+            }
+        })();
+        //]]>
+        </script>
     </section>
 
     <style>
@@ -743,39 +1380,216 @@
     
     
 
-    <section id='contact'>
-        <h2 style='font-size: clamp(2.5rem, 5vw, 3.5rem); letter-spacing: 2px; margin-bottom: 20px; color: var(--accent);'>CONTACT US</h2>
+
+    <!-- BOOKING OPTIONS SECTION -->
+    <section class='booking-section' id='booking'>
+        <div class='booking-header'>
+           <h2>Book Your Stay</h2>
+           <p>Find us on your favorite booking platforms</p>
+        </div>
         
-        <div class='contact-container'>
-            <div class='contact-info'>
-                <div class='contact-section'>
-                    <h3>Address</h3>
-                    <p>Villa Hundira,<br/>Talahena, Negombo</p>
-                </div>
-                
-                <div class='contact-section'>
-                    <h3>Phone</h3>
-                    <p>
-                        <a href='tel:+94777682347'>+94 77 768 2347</a><br/>
-                        <a href='tel:+94766773912'>+94 76 677 3912</a><br/>
-                        <a href='tel:+94312225420'>+94 31 222 5420</a>
-                    </p>
-                </div>
-                
-                <div class='contact-section'>
-                    <h3>Email</h3>
-                    <p>
-                        <a href='mailto:info@villahundira.com'>info@villahundira.com</a>
-                    </p>
-                </div>
-            </div>
+        <div class='booking-grid'>
+            <!-- Booking.com -->
+            <a href='https://www.booking.com' target='_blank' class='booking-card'>
+                <span class='book-via-text'>Book Via</span>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/320px-Booking.com_logo.svg.png' alt='Booking.com' class='platform-logo'/>
+            </a>
             
-            <div class='contact-map'>
-                <iframe allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9739537820947!2d79.83448187475814!3d7.133999392856969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2ee9c7fff2ba5%3A0x7f7f1c1f8b2f8b2f!2sVilla%20Hundira%20-%20Negombo!5e0!3m2!1sen!2slk!4v1706015000000!5m2!1sen!2slk'>
-                </iframe>
+            <!-- Trip.com -->
+            <a href='https://www.trip.com' target='_blank' class='booking-card'>
+                <span class='book-via-text'>Book Via</span>
+                <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/trip.com-logo.png' alt='Trip.com' class='platform-logo'/>
+            </a>
+            
+            <!-- Hotels.com -->
+            <a href='https://www.hotels.com' target='_blank' class='booking-card'>
+                <span class='book-via-text'>Book Via</span>
+                <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/hotels-.com-logo.png' alt='Hotels.com' class='platform-logo'/>
+            </a>
+            
+            <!-- Expedia -->
+            <a href='https://www.expedia.com' target='_blank' class='booking-card'>
+                <span class='book-via-text'>Book Via</span>
+                <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/wxpedia-logo.png' alt='Expedia' class='platform-logo'/>
+            </a>
+            
+            <!-- Agoda -->
+            <a href='https://www.agoda.com' target='_blank' class='booking-card'>
+                <span class='book-via-text'>Book Via</span>
+                <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/agoda-logo.png' alt='Agoda' class='platform-logo'/>
+            </a>
+        </div>
+
+        <div style='text-align: center; margin-top: 60px; position: relative; z-index: 1;'>
+            <p style='color: #1a3a3a; font-weight: bold; margin-bottom: 30px; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; opacity: 0.8;'>Transport Services Available</p>
+            <div class='transport-grid'>
+                <div class='transport-card' title='PickMe'>
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEj6MEe7n-rllOtbHHsDJo3zO6o3Pn3AfkGL4BIJG0WYe9P48RFvm35Gj0eN4A9-wvZJKfE3gWpqLdB8hl4hxiUsHU-OON8El6x1sKJkNPgxkBVCVxEa9xbJFYW4xMhCBKrSiIA6SERr7lxwLTc-gXFJEkfiGOIG-aZqKBfo_Yc3IROjTkX7OVinM5_SAbo" alt="PickMe"/>
+                </div>
+                <div class='transport-card' title='Uber'>
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjq5xsV1o4rPMw1obtxAMO2Nf86gXByP61W20qVcY5R9u-ytNw9TU69_V9rXIBq0zLagG8zYz_wXCdrYqHzL-c-0bpAZBrA8_ZF2Ci9e5G67YU4Gze9J76_N5Gsku5r4pjWJR4_nYhtte16CURMaBitO3byOOPUXMW4I_P2MA5fimPXLEp0yvieMByDxyI" alt="Uber"/>
+                </div>
+                <div class='transport-card' title='HelaGo'>
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEikwS-laWGYb37NTofjFYCpjNViXzbYakuaz87kfLIjGufn-3oe7QJmelvZCo0JtdNds90vYxgc_qxhbjvQwWx8nslTY0gApf5gwgqlOHCaYh6CQiG4Ety12amV7Q1WeuPksBsbPnXKqbXUphcbKcChJIOppQQYKUqmPbCnaqou6LqY19DYQdw3H9TEX5s" alt="HelaGo"/>
+                </div>
             </div>
         </div>
     </section>
+
+    <section id='contact' class='contact-section-wrapper'>
+        <div class='contact-split'>
+            <!-- LEFT: Contact Info & Form -->
+            <div class='contact-left'>
+                <div class='contact-header'>
+                    <h2>GET IN TOUCH</h2>
+                    <p>Ready for your seaside escape? Reach out to us for bookings, inquiries, or just to say hello.</p>
+                </div>
+
+                <div class='contact-details'>
+                    <!-- Address -->
+                    <div class='contact-item'>
+                        <div class='icon-box'>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class='contact-text'>
+                            <h4>Address</h4>
+                            <div class='contact-text-content'>
+                                Villa Hundira, Talahena,<br/>Negombo, Sri Lanka
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class='contact-item'>
+                        <div class='icon-box'>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class='contact-text'>
+                            <h4>Phone</h4>
+                            <div class='contact-text-content phone-group'>
+                                <div class='phone-number'>
+                                    <span class='phone-label'>Primary</span>
+                                    <a href='tel:+94777682347'>+94 77 768 2347</a>
+                                </div>
+                                <div class='phone-number'>
+                                    <span class='phone-label'>Secondary</span>
+                                    <a href='tel:+94766773912'>+94 76 677 3912</a>
+                                </div>
+                                <div class='phone-number'>
+                                    <span class='phone-label'>Landline</span>
+                                    <a href='tel:+94312225420'>+94 31 222 5420</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class='contact-item'>
+                        <div class='icon-box'>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class='contact-text'>
+                            <h4>Email</h4>
+                            <div class='contact-text-content'>
+                                <a href='mailto:info@villahundira.com'>info@villahundira.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Minimalist Form -->
+                <form class='modern-form' onsubmit='event.preventDefault(); alert("Thank you for your message!");'>
+                    <div class='input-group'>
+                        <input type='text' class='styled-input' placeholder='Your Name' required='required'/>
+                    </div>
+                    <div class='input-group'>
+                        <input type='email' class='styled-input' placeholder='Your Email' required='required'/>
+                    </div>
+                    <div class='input-group'>
+                        <input type='text' class='styled-input' placeholder='Message' required='required'/>
+                    </div>
+                    <button type='submit' class='submit-btn'>Send Message</button>
+                </form>
+            </div>
+
+            <!-- RIGHT: Map -->
+            <div class='contact-right'>
+                <div class='map-frame'>
+                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=MICHS+Beach+Villa&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div> <!-- END HOME VIEW -->
+
+    <!-- CUSTOM ROOMS SECTION -->
+    <div id='rooms-section'>
+        <div class='rooms-page-header'>
+            <h2>OUR ACCOMMODATION</h2>
+            <p>Experience luxury and comfort in our carefully designed suites</p>
+        </div>
+        
+        <div class='rooms-grid'>
+             <!-- Card 1: Deluxe Double -->
+             <div class='room-card-dark'>
+                 <div class='room-image-wrapper'>
+                    <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnCxaI_-m52tfQ-yRiO8QRiqBo5dILaMZkY56cE1RztHCmnnHEMeOAmleM-F-ulYevVXCyW2vo7A_vFHlC52MgCDW0e9GfbAIVz1STjRENwexPYD8idCeg_BN6y8pC3ya5JnimXPsVGdk7cMe9s2ny5esfuHrY7-iXi0a2l4Wnk7jFT3ro4if_fTkmQ5U/s600/WhatsApp%20Image%202026-01-23%20at%206.46.27%20PM%20(1).jpeg' alt='Deluxe Double Room'/>
+                 </div>
+                 <div class='room-content-dark'>
+                     <h3 class='room-title-dark'>DELUXE DOUBLE ROOM</h3>
+                     <div class='amenities-list-dark'>
+                         <div class='amenity-item-dark' title='Air Condition'>
+                            <!-- Air Con Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+                            <span>A/C</span>
+                         </div>
+                         <div class='amenity-item-dark' title='Hot Water'>
+                            <!-- Hot Water/Drop Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.74 5.88a7.81 7.81 0 1 1-11.48 0z"/></svg>
+                            <span>Hot Water</span>
+                         </div>
+                         <div class='amenity-item-dark' title='Television'>
+                            <!-- TV Icon -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                            <span>TV</span>
+                         </div>
+                     </div>
+                     <div class='room-footer-dark'>
+                         <span>Room Size: 70 m²</span>
+                         <span>1 King Bed</span>
+                     </div>
+                 </div>
+             </div>
+
+             <!-- Card 2: Family Suite (Example Wrapper for additional cards) -->
+             <div class='room-card-dark'>
+                 <div class='room-image-wrapper'>
+                    <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKlfWR4gA9Q-sgEheM-6v_i-yRO-fEFn0WDPv43XQoWm25RLuoynKg1oYQIoTsnUx4GltwLon0U09rmzhwUYIndhgozH8XKXRBWfryXQeUR7qMWP1Tj4lPP2gNjb5Ufp4YH0-NYtIF8UdEuASRBBxIqdPBm60Jl7INzB6h3xbBaWO56p_X0VBAu066s90/s600/WhatsApp%20Image%202026-01-23%20at%206.46.25%20PM%20(1).jpeg' alt='Family Suite'/>
+                 </div>
+                 <div class='room-content-dark'>
+                     <h3 class='room-title-dark'>LAGOON FAMILY SUITE</h3>
+                     <div class='amenities-list-dark'>
+                         <div class='amenity-item-dark'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+                            <span>WiFi</span>
+                         </div>
+                         <div class='amenity-item-dark'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>View</span>
+                         </div>
+                         <div class='amenity-item-dark'>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 16v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2"/></svg>
+                            <span>Work</span>
+                         </div>
+                     </div>
+                     <div class='room-footer-dark'>
+                         <span>Room Size: 85 m²</span>
+                         <span>2 Queen Beds</span>
+                     </div>
+                 </div>
+             </div>
+        </div>
+    </div>
 
     <b:section id='main-content' showaddelement='yes'>
       <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
@@ -1494,6 +2308,45 @@
     <script>
     //<![CDATA[
     class PremiumSlider{constructor(){this.currentSlide=0;this.slides=document.querySelectorAll('.slide');this.totalSlides=this.slides.length;this.sliderWrapper=document.getElementById('sliderWrapper');this.dotsContainer=document.getElementById('dotsContainer');this.progressBar=document.getElementById('progressBar');this.autoPlayInterval=null;this.autoPlayDuration=5000;this.progressInterval=null;this.init()}init(){this.createDots();this.attachEventListeners();this.startAutoPlay();this.updateSlider()}createDots(){for(let i=0;i<this.totalSlides;i++){const dot=document.createElement('div');dot.classList.add('dot');if(i===0)dot.classList.add('active');dot.addEventListener('click',()=>this.goToSlide(i));this.dotsContainer.appendChild(dot)}}attachEventListeners(){document.getElementById('prevBtn').addEventListener('click',()=>{this.prevSlide();this.resetAutoPlay()});document.getElementById('nextBtn').addEventListener('click',()=>{this.nextSlide();this.resetAutoPlay()});this.sliderWrapper.addEventListener('mouseenter',()=>this.pauseAutoPlay());this.sliderWrapper.addEventListener('mouseleave',()=>this.startAutoPlay());document.addEventListener('keydown',(e)=>{if(e.key==='ArrowLeft'){this.prevSlide();this.resetAutoPlay()}else if(e.key==='ArrowRight'){this.nextSlide();this.resetAutoPlay()}});let touchStartX=0;let touchEndX=0;this.sliderWrapper.addEventListener('touchstart',(e)=>{touchStartX=e.changedTouches[0].screenX});this.sliderWrapper.addEventListener('touchend',(e)=>{touchEndX=e.changedTouches[0].screenX;if(touchStartX-touchEndX>50){this.nextSlide();this.resetAutoPlay()}else if(touchEndX-touchStartX>50){this.prevSlide();this.resetAutoPlay()}})}updateSlider(){this.sliderWrapper.style.transform=`translateX(-${this.currentSlide*100}%)`;this.slides.forEach((slide,index)=>{slide.classList.toggle('active',index===this.currentSlide)});const dots=this.dotsContainer.querySelectorAll('.dot');dots.forEach((dot,index)=>{dot.classList.toggle('active',index===this.currentSlide)})}nextSlide(){this.currentSlide=(this.currentSlide+1)%this.totalSlides;this.updateSlider()}prevSlide(){this.currentSlide=(this.currentSlide-1+this.totalSlides)%this.totalSlides;this.updateSlider()}goToSlide(index){this.currentSlide=index;this.updateSlider();this.resetAutoPlay()}startAutoPlay(){this.autoPlayInterval=setInterval(()=>{this.nextSlide()},this.autoPlayDuration);this.startProgressBar()}pauseAutoPlay(){clearInterval(this.autoPlayInterval);clearInterval(this.progressInterval);this.progressBar.style.width='0%'}resetAutoPlay(){this.pauseAutoPlay();this.startAutoPlay()}startProgressBar(){let progress=0;const increment=100/(this.autoPlayDuration/50);this.progressInterval=setInterval(()=>{progress+=increment;if(progress>=100){progress=0}this.progressBar.style.width=`${progress}%`},50)}}document.addEventListener('DOMContentLoaded',()=>{new PremiumSlider()});
+    //]]>
+    </script>
+    
+    <script>
+    //<![CDATA[
+    // ROOMS TOGGLE LOGIC
+    function showRooms() {
+        // Toggle visibility
+        const homeView = document.getElementById('home-view');
+        const mainContent = document.getElementById('main-content');
+        const roomsSection = document.getElementById('rooms-section');
+        
+        if(homeView) homeView.style.display = 'none';
+        if(mainContent) mainContent.style.display = 'none';
+        if(roomsSection) roomsSection.style.display = 'block';
+        
+        // Scroll to top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    function showHome() {
+        // Toggle visibility
+        const homeView = document.getElementById('home-view');
+        const mainContent = document.getElementById('main-content');
+        const roomsSection = document.getElementById('rooms-section');
+        
+        if(roomsSection) roomsSection.style.display = 'none';
+        if(homeView) homeView.style.display = 'block';
+        if(mainContent) mainContent.style.display = 'block';
+        
+        // Scroll to top
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
     //]]>
     </script>
 
