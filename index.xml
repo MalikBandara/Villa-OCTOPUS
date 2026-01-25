@@ -65,6 +65,33 @@
             color: var(--accent); 
             text-decoration: none; 
         }
+
+        .logo-link {
+            display: block;
+            position: relative;
+            width: 280px;
+            height: 50px;
+        }
+        
+        .logo-img {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 130px;
+            width: auto;
+            max-width: none;
+        }
+
+        @media (max-width: 768px) {
+            .logo-link {
+                width: 180px;
+                height: 40px;
+            }
+            .logo-img {
+                height: 80px;
+            }
+        }
         
         .nav-links { 
             display: flex; 
@@ -1181,16 +1208,16 @@
 
   <header>
     <nav>
-      <a class='logo' href='#home' style='display: block; position: relative; width: 280px; height: 50px;'>
-        <img src='https://blogger.googleusercontent.com/img/a/AVvXsEhUNQ3AO2WzB58vxYbiE4LnWILH9r9zGfE_XQtXajReweKcPg6DtHVdHSzUGpbesqXc5Gxh08EiTV-HQaEzjQ1cQjgns8O2cRimG6ZhByymNtMkhD57TktYUEk8vvEambXB0zYPpnlZhXsEVv0o1-mXp8e7qmFAmM1WGweKiatydEVh-QCNjnKnATZYOdw' alt='Villa Octopus' style='position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 130px; width: auto; max-width: none;'/>
+      <a class='logo logo-link' href='#home' onclick='showHome()'>
+        <img class='logo-img' src='https://blogger.googleusercontent.com/img/a/AVvXsEhUNQ3AO2WzB58vxYbiE4LnWILH9r9zGfE_XQtXajReweKcPg6DtHVdHSzUGpbesqXc5Gxh08EiTV-HQaEzjQ1cQjgns8O2cRimG6ZhByymNtMkhD57TktYUEk8vvEambXB0zYPpnlZhXsEVv0o1-mXp8e7qmFAmM1WGweKiatydEVh-QCNjnKnATZYOdw' alt='Villa Octopus'/>
       </a>
       <div class='nav-links'>
         <a href='javascript:void(0)' onclick='showHome()'>Home</a>
-        <a href='#about'>About</a>
+        <a href='#about' onclick='showHome(false)'>About</a>
         <a href='javascript:void(0)' onclick='showRooms()'>Rooms</a>
         <a href='javascript:void(0)' onclick='showMeals()'>Meals</a>
         <a href='javascript:void(0)' onclick='showGallery()'>Gallery</a>
-        <a href='#contact'>Contact</a>
+        <a href='#contact' onclick='showHome(false)'>Contact</a>
       </div>
       <div class='menu-icon' id='menuBtn'>
         <span />
@@ -1202,11 +1229,11 @@
 
   <div class='mobile-overlay' id='mobileNav'>
     <a href='javascript:void(0)' onclick='showHome()'>Home</a>
-    <a href='#about'>About</a>
+    <a href='#about' onclick='showHome(false)'>About</a>
     <a href='javascript:void(0)' onclick='showRooms()'>Rooms</a>
     <a href='javascript:void(0)' onclick='showMeals()'>Meals</a>
     <a href='javascript:void(0)' onclick='showGallery()'>Gallery</a>
-    <a href='#contact'>Contact</a>
+    <a href='#contact' onclick='showHome(false)'>Contact</a>
   </div>
 
   <div id='home-view'>
@@ -3382,12 +3409,13 @@
 
       @media (max-width: 768px) {
         .gallery-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 10px;
+          grid-template-columns: 1fr;
+          gap: 25px;
         }
 
         .gallery-grid img {
-          height: 150px;
+          height: auto;
+          min-height: 300px;
         }
       }
     </style>
@@ -3485,7 +3513,7 @@
       });
     }
 
-    function showHome() {
+    function showHome(scrollToTop = true) {
       // Toggle visibility
       const homeView = document.getElementById('home-view');
       const mainContent = document.getElementById('main-content');
@@ -3499,11 +3527,13 @@
       if (homeView) homeView.style.display = 'block';
       if (mainContent) mainContent.style.display = 'block';
 
-      // Scroll to top
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      // Scroll to top only if requested
+      if (scrollToTop) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     }
 
     function showGallery() {
@@ -3519,8 +3549,7 @@
       if (mealsSection) mealsSection.style.display = 'none';
       if (gallerySection) gallerySection.style.display = 'block';
 
-      const mobileNav = document.getElementById('mobileNav');
-      if (mobileNav) mobileNav.classList.remove('active');
+
 
       window.scrollTo({
         top: 0,
@@ -3543,8 +3572,7 @@
       if (gallerySection) gallerySection.style.display = 'none';
 
       // Close mobile menu if open
-      const mobileNav = document.getElementById('mobileNav');
-      if (mobileNav) mobileNav.classList.remove('active');
+
 
       // Scroll to top
       window.scrollTo({
