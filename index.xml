@@ -1181,13 +1181,15 @@
 
   <header>
     <nav>
-      <a class='logo' href='#home'>OCTOPUS</a>
+      <a class='logo' href='#home' style='display: block; position: relative; width: 280px; height: 50px;'>
+        <img src='https://blogger.googleusercontent.com/img/a/AVvXsEhUNQ3AO2WzB58vxYbiE4LnWILH9r9zGfE_XQtXajReweKcPg6DtHVdHSzUGpbesqXc5Gxh08EiTV-HQaEzjQ1cQjgns8O2cRimG6ZhByymNtMkhD57TktYUEk8vvEambXB0zYPpnlZhXsEVv0o1-mXp8e7qmFAmM1WGweKiatydEVh-QCNjnKnATZYOdw' alt='Villa Octopus' style='position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 130px; width: auto; max-width: none;'/>
+      </a>
       <div class='nav-links'>
         <a href='javascript:void(0)' onclick='showHome()'>Home</a>
         <a href='#about'>About</a>
         <a href='javascript:void(0)' onclick='showRooms()'>Rooms</a>
         <a href='javascript:void(0)' onclick='showMeals()'>Meals</a>
-        <a href='#experience'>Experience</a>
+        <a href='javascript:void(0)' onclick='showGallery()'>Gallery</a>
         <a href='#contact'>Contact</a>
       </div>
       <div class='menu-icon' id='menuBtn'>
@@ -1203,7 +1205,7 @@
     <a href='#about'>About</a>
     <a href='javascript:void(0)' onclick='showRooms()'>Rooms</a>
     <a href='javascript:void(0)' onclick='showMeals()'>Meals</a>
-    <a href='#experience'>Experience</a>
+    <a href='javascript:void(0)' onclick='showGallery()'>Gallery</a>
     <a href='#contact'>Contact</a>
   </div>
 
@@ -1285,7 +1287,7 @@
     <section id='rooms'>
       <div class='room-container'>
         <div class='room-details'>
-          <h2 class='room-title'>LAGOON SUITE</h2>
+          <h2 class='room-title'>BEACH SUITE</h2>
           <div class='room-description'>
             <p>Make yourself at home on the 2nd floor where you can lounge with your loved one on a four postered bed;
               overlooking the picturesque lagoon through our large windows.</p>
@@ -1344,7 +1346,7 @@
 
         <!-- Galle Fort -->
         <div class='location-card'
-          style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEgB_RSb9vY8WQya5o8xbvQdx-FyHqHt8PCag7fGYaU2cM9HJiVgnboiyAphKD3XMRvsABYVQxW7gk7TWQyG5TW0ryo4h4eUXt_RhjUat63AHQFGbd-IXNiDOgTUU8MstRw5zaCL-09hNsS6DemYZPNryQUBiYW4jTGUlu5BsqXylU-0GY3wl2iR74sL5Xk");'>
+          style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEgbFmwVmkymc8nsMieJ-LFB_xjCdsqUSQHy8ADaJkHKhF-bGvr4LqZ3D7Ksk-K2LZzt2CUmEdGD44hJOH02ZI81b0cS8Brp9X99QQjhpkCFQbgDkELnLV9Z6Tuk-DdzKW2YfvH6N2lUs-NA2-m1vMu5_gwvXkQ8nYCfiKOIN5UVh0H_n_IiXvzAY7f0m_M");'>
           <div class='location-pill'>To Galle Fort</div>
           <div class='location-details'>
             <div class='location-time'>1 hr 5 min</div>
@@ -1369,6 +1371,56 @@
           <div class='location-details'>
             <div class='location-time'>1 hr 45 min</div>
             <div class='location-dist'>65 km</div>
+          </div>
+        </div>
+
+        <!-- Galle Lighthouse -->
+        <div class='location-card'
+          style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEhgps3ZcKnHJVb6YME2Qes5InaJqjCOBSpyReXYBB1wU8QqXmLLXl6rFTV5fU-UCL2CGbQZlTJrWM3h7QfA2rfwnFnMwbm8MyFosEwMNv8X8_Qk9cgGrpDe2CuaVmSrncab8cAPFm8uFoB-s_O1MyvOFrQsCqz8HjNuBuiyFqxzs58MHuOg7EhOtI4dT1o");'>
+          <div class='location-pill'>To Galle Lighthouse</div>
+          <div class='location-details'>
+            <div class='location-time'>1 hr 10 min</div>
+            <div class='location-dist'>67 km via E01</div>
+          </div>
+        </div>
+
+        <!-- Thudugala Waterfall -->
+        <div class='location-card'
+          style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEgrOk9z942gdGKBHVMjSpdwLnMCVee6NEWXksGPktw2TgCKWWATV7tD_ZMhsgf25IyhC_3xiUAmlSInHHawbSqY__bG0ctXuWSjloo3bjDZDGjJzYqV1iD0VCn-v4VNqIasjw-AIyp37EIqlm6R5qRpjeHtWN0uFOVigZjbylizXciwpye6REHGa-YsJq0");'>
+          <div class='location-pill'>To Thudugala Waterfall</div>
+          <div class='location-details'>
+            <div class='location-time'>45 min</div>
+            <div class='location-dist'>25 km</div>
+          </div>
+        </div>
+
+        <!-- Turtle Farm -->
+        <div class='location-card'
+          style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEibKiZGTJLdKro1BdymYZHFawoDTzuCyQsCQLwsu_tJ4tKZRajMGtQH41klCbxLLNqX6cijXoxHm_2XrHzbZOpUXRrXP3uHtftPTOY_h5CiM9FYT51odzyqvhKUU_wBqO6pgI88WKZv4gbfq9KPOGnc2QCrqaaK7_tJdPFiVFzveQaFs_AsKfAjNpoPPK8");'>
+          <div class='location-pill'>To Turtle Farm</div>
+          <div class='location-details'>
+            <div class='location-time'>30 min</div>
+            <div class='location-dist'>20 km</div>
+          </div>
+        </div>
+
+        <!-- Kosgoda Water Sports -->
+        <div class='location-card'
+          style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEhclnau5vJ3HuHqMJgp-vIjXdLad7XEdAc1FXh8OAUX49Psphc4eQXSJKfgAuXrni25q6dwvC8hsdoEAy4QNxhUkRMGyKDSWje3nUB1mNZYBsiUJf1yfrAsocfiqOsLNj2AjRK8dvpVwFLy3p_nyShqvMEUWbLyIMFSns87Qes-hj0IHrFQu3CM3Fyp_pY");'>
+          <div class='location-pill'>Kosgoda Water Sports</div>
+          <div class='location-details'>
+            <div class='location-time'>30 min</div>
+            <div class='location-dist'>20 km</div>
+          </div>
+        </div>
+
+        <!-- Surf Beach Payagala -->
+        <div class='location-card'
+          style='background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEhikr1zI0SdDKctSP-sipfWDL8i5CkOBKqIlUJY5GcIOPl649tBi6S6MFFqpH_q7yINQtMQW8SHkR00fQ_vxGj5JoK3tcZfojz2oKpdQnkW4sqACB6UJig7clqG7G-ejJZXj8iIG3_lCyH4nstxq7GWBXDJLIeR2z7fHnobt2qmgew4pCPSXEBBvgPfAwg");'>
+          <div class='location-pill'>Surf Beach Payagala</div>
+          <div class='location-details'>
+            <div class='location-time'>10 min</div>
+            <div class='location-dist'>4 km</div>
           </div>
         </div>
       </div>
@@ -1666,23 +1718,11 @@
 
     <style>
       #guide-slider {
-        background: #1a3a3a;
+        background: #1a1a1a;
         color: #fff;
         position: relative;
         padding: 80px 5%;
         overflow: hidden
-      }
-
-      #guide-slider::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
-        z-index: 0;
-        pointer-events: none
       }
 
       .guide-container {
@@ -1701,7 +1741,7 @@
       .guide-header h2 {
         font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 700;
-        color: #fff;
+        color: #8bb174;
         margin-bottom: 20px;
         letter-spacing: 2px;
         text-transform: uppercase
@@ -1709,7 +1749,7 @@
 
       .guide-header p {
         font-size: clamp(1.1rem, 2vw, 1.3rem);
-        color: rgba(255, 255, 255, 0.85);
+        color: #aaa;
         max-width: 700px;
         margin: 0 auto;
         line-height: 1.6;
@@ -1987,6 +2027,7 @@
         }
       }
 
+
       @keyframes fadeInDown {
         from {
           opacity: 0;
@@ -2059,7 +2100,7 @@
             <div class='slide active'>
               <div class='slide-content'>
                 <div class='slide-image'><img alt='Experienced Professional Guide'
-                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvd9rQVGciX4aBCFHccDBa87fRErbv7T4hi6kwNxhOb0KyeD7tn1yFuD6pTcKYdwseO5J2aYzC9d8vjDcYHkDvhWQdAgBt_t8MmZyM9OfpBFNHZaSZ70mv_xUnJHRBNFkthUeGdITr7USA4qy_317CFn39BNXOyXK-QJniaAKiyLbKuT1CdqXtyuv3SZg/s320/WhatsApp%20Image%202026-01-24%20at%207.33.00%20PM%20%281%29.jpeg' />
+                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvd9rQVGciX4aBCFHccDBa87fRErbv7T4hi6kwNxhOb0KyeD7tn1yFuD6pTcKYdwseO5J2aYzC9d8vjDcYHkDvhWQdAgBt_t8MmZyM9OfpBFNHZaSZ70mv_xUnJHRBNFkthUeGdITr7USA4qy_317CFn39BNXOyXK-QJniaAKiyLbKuT1CdqXtyuv3SZg/s1600/WhatsApp%20Image%202026-01-24%20at%207.33.00%20PM%20%281%29.jpeg' />
                 </div>
                 <div class='slide-text'><span class='slide-badge'>Experience</span>
                   <h2 class='slide-title'>Experienced Professional</h2>
@@ -2073,7 +2114,7 @@
             <div class='slide'>
               <div class='slide-content'>
                 <div class='slide-image'><img alt='Top-Rated Service Excellence'
-                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYnWmAER-bZdYtQh4s_7QHRjlZqQgr3BtETGylcKW3QA1hDQNTVWaEJ42jiu4kt7-FF-vWUkgHeopNwExeJbP5s7aE7mmY7X5reG9UAmr3u4WCb5kBG4BstLGpkjwCf3939cARg3AD4hni4xbCeO1jjxI71PTAxjTaynuqzJSdkt1aeEuhPwv-pU8ktKc/s320/WhatsApp%20Image%202026-01-23%20at%2011.56.46%20PM.jpeg' />
+                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYnWmAER-bZdYtQh4s_7QHRjlZqQgr3BtETGylcKW3QA1hDQNTVWaEJ42jiu4kt7-FF-vWUkgHeopNwExeJbP5s7aE7mmY7X5reG9UAmr3u4WCb5kBG4BstLGpkjwCf3939cARg3AD4hni4xbCeO1jjxI71PTAxjTaynuqzJSdkt1aeEuhPwv-pU8ktKc/s1600/WhatsApp%20Image%202026-01-23%20at%2011.56.46%20PM.jpeg' />
                 </div>
                 <div class='slide-text'><span class='slide-badge'>Excellence</span>
                   <h2 class='slide-title'>Top-Rated Service</h2>
@@ -2087,7 +2128,7 @@
             <div class='slide'>
               <div class='slide-content'>
                 <div class='slide-image'><img alt='Deep Diving Adventure'
-                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip0BllqzgE13v_CpBX7AA43f1ZuAOHR4HsrFH4H6DfaY64uVm7mGBEdoN7XzaTIT2VbyDJMpfchSaNiZY4idng-_6oTHInFGojmgr53G_qqnzeKyve9smkePpYocRjqQeYN4bjkYpR_8NGGIqWuBJl3nR1DW_PAmChalHwmd5VNUvt0FQSjXz1k0vnhiI/s320/WhatsApp%20Image%202026-01-23%20at%2011.56.45%20PM.jpeg' />
+                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip0BllqzgE13v_CpBX7AA43f1ZuAOHR4HsrFH4H6DfaY64uVm7mGBEdoN7XzaTIT2VbyDJMpfchSaNiZY4idng-_6oTHInFGojmgr53G_qqnzeKyve9smkePpYocRjqQeYN4bjkYpR_8NGGIqWuBJl3nR1DW_PAmChalHwmd5VNUvt0FQSjXz1k0vnhiI/s1600/WhatsApp%20Image%202026-01-23%20at%2011.56.45%20PM.jpeg' />
                 </div>
                 <div class='slide-text'><span class='slide-badge'>Adventure</span>
                   <h2 class='slide-title'>Adventure Ready</h2>
@@ -2101,22 +2142,8 @@
             </div>
             <div class='slide'>
               <div class='slide-content'>
-                <div class='slide-image'><img alt='Musical Entertainment'
-                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigNQ3PVBAWXA9GX4jm9J2ajrhWJAEPYqOh8S9IU7IV-e8NY2UoI-Ilkq7V2Xde4w7Lj7kqrdykCubTo21nhNTpwTN6dy6y9wi2UrAVxHXYF0y_yyAz62i1ylNoBk-HdcI9ff7SRly8u9THodoH25HWlzRcKkTNw42Sufg_QV-cAWjoSSeBykU7Wi5QC2s/s320/WhatsApp%20Image%202026-01-24%20at%2012.20.04%20AM.jpeg' />
-                </div>
-                <div class='slide-text'><span class='slide-badge'>Entertainment</span>
-                  <h2 class='slide-title'>Talented Entertainer</h2>
-                  <p class='slide-description'>When the sun sets, the adventure continues! As a talented singer, I love
-                    brightening evenings with music.</p>
-                  <div class='slide-features'><span class='feature-tag'>Live Music</span><span class='feature-tag'>Beach
-                      Performances</span><span class='feature-tag'>Cultural Shows</span></div>
-                </div>
-              </div>
-            </div>
-            <div class='slide'>
-              <div class='slide-content'>
                 <div class='slide-image'><img alt='Guest Favorite Hospitality'
-                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYnWmAER-bZdYtQh4s_7QHRjlZqQgr3BtETGylcKW3QA1hDQNTVWaEJ42jiu4kt7-FF-vWUkgHeopNwExeJbP5s7aE7mmY7X5reG9UAmr3u4WCb5kBG4BstLGpkjwCf3939cARg3AD4hni4xbCeO1jjxI71PTAxjTaynuqzJSdkt1aeEuhPwv-pU8ktKc/s320/WhatsApp%20Image%202026-01-23%20at%2011.56.46%20PM.jpeg' />
+                    src='https://blogger.googleusercontent.com/img/a/AVvXsEgjdB5BgRER7mc-l4VdfcMIYud6pvMc5RPXJWeXySZtxrlB-0R2RY2Tydc_K-0d72dXdF9njYEbsKQWH48OHzeUjFXdpZwzTHcWKWGjor2HiukaPFuGHGdiiQTF3jJiisk2S6SSIfUupXTbxZsZLJDEOv3n3NAuQ9Pgwwg2r4bje0hmqZSKcdLkcLVTQio' />
                 </div>
                 <div class='slide-text'><span class='slide-badge'>Hospitality</span>
                   <h2 class='slide-title'>Guest Favorite</h2>
@@ -2130,7 +2157,7 @@
             <div class='slide'>
               <div class='slide-content'>
                 <div class='slide-image'><img alt='Multilingual Communication'
-                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMFWmEGq_Cv1u8I6B2rzqupb2_CSyTuy1zDxTH_TGz_iDbEy57dMUESlllJ3FgWDmrsRvc0rkq9q3YcFeRNJ0EEI8hD0KHqpSW5Oy8oWGF13S7jtl4ewqSx5fjUMPMKiXlTmj2ab4rUjUjFJRE2REGvjc74tIIkYUTn3cgOXVH4dSuYxIIkFMMrqUZzGg/w151-h310/WhatsApp%20Image%202026-01-23%20at%2011.56.47%20PM.jpeg' />
+                    src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMFWmEGq_Cv1u8I6B2rzqupb2_CSyTuy1zDxTH_TGz_iDbEy57dMUESlllJ3FgWDmrsRvc0rkq9q3YcFeRNJ0EEI8hD0KHqpSW5Oy8oWGF13S7jtl4ewqSx5fjUMPMKiXlTmj2ab4rUjUjFJRE2REGvjc74tIIkYUTn3cgOXVH4dSuYxIIkFMMrqUZzGg/s1600/WhatsApp%20Image%202026-01-23%20at%2011.56.47%20PM.jpeg' />
                 </div>
                 <div class='slide-text'><span class='slide-badge'>Communication</span>
                   <h2 class='slide-title'>3 Language Specialist</h2>
@@ -2331,102 +2358,59 @@
     </div>
 
     <div class='rooms-grid'>
-      <!-- Card 1: Deluxe Double -->
       <div class='room-card-dark'>
-        <div class='room-image-wrapper split-view'>
+        <!-- Modern Grid Styles -->
+        <style>
+          .modern-room-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+            width: 100%;
+          }
+          .modern-room-grid img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+          }
+          .modern-room-grid img:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+          }
+          @media (max-width: 768px) {
+            .modern-room-grid {
+               gap: 10px;
+            }
+            .modern-room-grid img {
+              height: 160px;
+              border-radius: 8px;
+            }
+          }
+        </style>
+        <div class='modern-room-grid'>
           <img
             src='https://blogger.googleusercontent.com/img/a/AVvXsEguFpzRrBuiQV-Xsglai0PLcQUAz2UN7m2NxD01XkOvbRBlBINjaRJQx9vheN9w_YngE8mekKHYrkXCqppLB5QQh_Wvh-YgSyA5JojmfD9bomyAQQecLlwFVcNRMoJZ-9o523dTZUg-uMwaytnHDCcuIR8cQRNLp6AO_lLS4NSZ2ACH4oX8EM5V1R-8QBQ'
             alt='Deluxe Double Room' />
           <img
             src='https://blogger.googleusercontent.com/img/a/AVvXsEhyuqdNeIhIL96uo0_Ug6cCShNO7yt7lgocTkW1PjEudzTIsQPMrdvXtG-E_y8skqRIZRhB3Ht7f-dkdmiuyTdPYQUKuH7Mt9-_jGLslaCQheOW_rMOr9YC4gMNUKSkLTtQgTJCFXhQGdNKEIqbrKbhJZWhOtNuooyH7Vj4JFuj45pXp5M6MaM9At92P3A'
             alt='Attached Bathroom' />
-        </div>
-        <div class='room-content-dark'>
-          <h3 class='room-title-dark'>DELUXE DOUBLE ROOM</h3>
-          <div class='amenities-list-dark' style='flex-wrap: wrap; gap: 15px;'>
-            <!-- Air Condition -->
-            <div class='amenity-item-dark' title='Air Condition'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" />
-              </svg>
-              <span>A/C</span>
-            </div>
-            <!-- Television -->
-            <div class='amenity-item-dark' title='Television'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
-                <polyline points="17 2 12 7 7 2" />
-              </svg>
-              <span>TV</span>
-            </div>
-            <!-- Attached Bathroom -->
-            <div class='amenity-item-dark' title='Attached Bathroom'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M9 21h6v-2a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2zm2-2v-4a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v4M4 12V6a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v6M4 12h16" />
-              </svg>
-              <span>Bath</span>
-            </div>
-            <!-- Hot Water -->
-            <div class='amenity-item-dark' title='Hot Water'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M12 2.69l5.74 5.88a7.81 7.81 0 1 1-11.48 0z" />
-              </svg>
-              <span>Hot Water</span>
-            </div>
-            <!-- WiFi -->
-            <div class='amenity-item-dark' title='WiFi'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
-                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
-                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-                <line x1="12" y1="20" x2="12.01" y2="20"></line>
-              </svg>
-              <span>Wifi</span>
-            </div>
-            <!-- View -->
-            <div class='amenity-item-dark' title='Scenic View'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path
-                  d="M19.778 19.778A10.512 10.512 0 0 1 12 21c-5.207 0-9.66-3.793-10.778-9C2.34 6.793 6.793 3 12 3c1.78 0 3.473.447 4.978 1.25">
-                </path>
-                <path d="M21 21l-4.22-4.22"></path>
-              </svg>
-              <span>View</span>
-            </div>
-            <!-- Kitchen -->
-            <div class='amenity-item-dark' title='Kitchen Facilities'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M2 20h20M2 16h20M4 12h16M4 8h16M2 4h20" />
-              </svg>
-              <span>Kitchen</span>
-            </div>
-          </div>
-          <div class='room-footer-dark'>
-            <span>Room Size: 70 m²</span>
-            <span>1 King Bed</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2: Deluxe Double (Reproduced for second card as requested) -->
-      <div class='room-card-dark'>
-        <div class='room-image-wrapper'>
           <img
             src='https://blogger.googleusercontent.com/img/a/AVvXsEjeISmwOYn3ZleD5LpJfaXFEydaH-tHoqPjv5FMt4GFFYevJ-cGvUdjBk0BcCpvtvddwXH535JBujr94CmSBuklrv_4-z2RsQWViV3eZDH4WovfiJMxcCVgbIjgRo5FLNDNLJB3huTtXzpfnzXob2hvSeVk_nl8_kkseagwyik-iV9eXcdAFpnsJ9bQXwE'
-            alt='Deluxe Double Room' />
+            alt='Room Interior' />
+          <img
+            src='https://blogger.googleusercontent.com/img/a/AVvXsEgBpkC-s1qKEheB1Kg7D5Y4E9WuwA2rgXMbQr8YaXihKuhX1Pgnmu223PSZX4LTY7kA3J15PMxU63EESPtEOVCQURI-N6PhUCuNB5sY5IjvZOPXNxonGvQ9mn_c4KGXgt5ZGvD_tqTuDZB3eL8CLFkmtzuNY77XfHJPb0WmasbpHsrJWtCr6GzQYVbE7Ik'
+            alt='Additional Room View' />
         </div>
         <div class='room-content-dark'>
-          <h3 class='room-title-dark'>DELUXE DOUBLE ROOM</h3>
+          <h3 class='room-title-dark' style='margin-bottom: 10px;'>THREE A/C ROOMS</h3>
+          <div class='room-description-dark' style='color: #ccc; margin-bottom: 20px; line-height: 1.6; font-size: 0.95rem;'>
+             <p style='margin-bottom: 8px;'>Three spacious A/C rooms available. <strong style='color: #8bb174;'>One room features hot water.</strong></p>
+             <p>Guests enjoy free tea &amp; coffee for self-cooking. The kitchen is fully equipped with free gas, blenders, rice cookers, a fridge, and gas cookers.</p>
+          </div>
           <div class='amenities-list-dark' style='flex-wrap: wrap; gap: 15px;'>
             <!-- Air Condition -->
             <div class='amenity-item-dark' title='Air Condition'>
@@ -2437,14 +2421,13 @@
               </svg>
               <span>A/C</span>
             </div>
-            <!-- Television -->
-            <div class='amenity-item-dark' title='Television'>
+            <!-- Kitchen -->
+            <div class='amenity-item-dark' title='Non-Smoking'>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
-                <polyline points="17 2 12 7 7 2" />
+                 <path d="M2 20h20M2 16h20M4 12h16M4 8h16M2 4h20" />
               </svg>
-              <span>TV</span>
+               <span>Kitchen</span>
             </div>
             <!-- Attached Bathroom -->
             <div class='amenity-item-dark' title='Attached Bathroom'>
@@ -2461,7 +2444,7 @@
                 stroke-linejoin="round">
                 <path d="M12 2.69l5.74 5.88a7.81 7.81 0 1 1-11.48 0z" />
               </svg>
-              <span>Hot Water</span>
+              <span>Hot Water (1)</span>
             </div>
             <!-- WiFi -->
             <div class='amenity-item-dark' title='WiFi'>
@@ -2474,32 +2457,13 @@
               </svg>
               <span>Wifi</span>
             </div>
-            <!-- View -->
-            <div class='amenity-item-dark' title='Scenic View'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path
-                  d="M19.778 19.778A10.512 10.512 0 0 1 12 21c-5.207 0-9.66-3.793-10.778-9C2.34 6.793 6.793 3 12 3c1.78 0 3.473.447 4.978 1.25">
-                </path>
-                <path d="M21 21l-4.22-4.22"></path>
-              </svg>
-              <span>View</span>
-            </div>
-            <!-- Kitchen -->
-            <div class='amenity-item-dark' title='Kitchen Facilities'>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M2 20h20M2 16h20M4 12h16M4 8h16M2 4h20" />
-              </svg>
-              <span>Kitchen</span>
-            </div>
           </div>
-          <div class='room-footer-dark'>
-            <span>Room Size: 85 m²</span>
-            <span>2 Queen Beds</span>
+          <div class='room-footer-dark' style='margin-top: 20px;'>
+            <span>Whole Villa / Individual Rooms</span>
           </div>
         </div>
+
+
       </div>
     </div>
   </div>
@@ -3383,6 +3347,92 @@
     </div>
   </div>
 
+
+  <!-- GALLERY SECTION -->
+  <div id='gallery-section' style='display: none; background-color: #fdfbf7; padding: 100px 5% 80px; min-height: 100vh;'>
+    <div class='gallery-page-header' style='text-align: center; margin-bottom: 60px;'>
+      <h2 style='font-size: clamp(2.5rem, 5vw, 3.5rem); color: #1a3a3a; margin-bottom: 15px; letter-spacing: 2px;'>GALLERY</h2>
+      <p style='font-family: "Outfit", sans-serif; font-size: 1.1rem; color: #666;'>A glimpse into our sanctuary</p>
+    </div>
+
+    <style>
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .gallery-grid img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-grid img:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            position: relative;
+      }
+
+      @media (max-width: 768px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+
+        .gallery-grid img {
+          height: 150px;
+        }
+      }
+    </style>
+
+    <div class='gallery-grid'>
+      <img
+        src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvd9rQVGciX4aBCFHccDBa87fRErbv7T4hi6kwNxhOb0KyeD7tn1yFuD6pTcKYdwseO5J2aYzC9d8vjDcYHkDvhWQdAgBt_t8MmZyM9OfpBFNHZaSZ70mv_xUnJHRBNFkthUeGdITr7USA4qy_317CFn39BNXOyXK-QJniaAKiyLbKuT1CdqXtyuv3SZg/s1600/WhatsApp%20Image%202026-01-24%20at%207.33.00%20PM%20%281%29.jpeg'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEEe6ZCyTIHXYGqoHFC_XXwe857DeTxp5z3lWogCJzG4Qh55yFeHl483W6sBBv3SRKhAdfMtmbq0jpFn_Z9PgApz1HW_4lZp7mEykCo7SSzN2si1oJUokNwDyqUuGJKmvJdWOCSpak_EB83GUUt8xJ8I3mbphbjmBN2PoT8OSVuq5vpdtQcALeflbFmfk/s1600/WhatsApp%20Image%202026-01-24%20at%207.33.00%20PM.jpeg'
+        alt='Gallery Image' />
+     
+      <img
+        src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMFWmEGq_Cv1u8I6B2rzqupb2_CSyTuy1zDxTH_TGz_iDbEy57dMUESlllJ3FgWDmrsRvc0rkq9q3YcFeRNJ0EEI8hD0KHqpSW5Oy8oWGF13S7jtl4ewqSx5fjUMPMKiXlTmj2ab4rUjUjFJRE2REGvjc74tIIkYUTn3cgOXVH4dSuYxIIkFMMrqUZzGg/s1600/WhatsApp%20Image%202026-01-23%20at%2011.56.47%20PM.jpeg'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEgPQu5WB4v2h8kQkiJLWV2vy5hAz5bE1bbRbC8oyqdkX6f5yEvSFL5CQkeHkTYhSYlf1gyCLo8cWgSTeTc0X4wSr0TEsb0iTIOlBEu-7vEGO9NQIgghbtd0ZUBbxvobqmABHxDEVX7ST6A2jvNKGmW_tfMwy7YAtd2965Vt5Fe_kGLGh5TusVSh0CVnTos=s1600'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEgUkj8PJ4_AJgRBXRka5n3tV2d-WknhejUE-S2zlgV_WB_Iiw3ZLA0Tblm5W2N3rydqBa5QP3LjyJvkwcd6BMM0AQ9j0I8PfaE4c_dP3Yuhs7vjV1X80DN6DdoCiDT4b1Odpe5HAm9aHVBInv3Y3TBSESZfIjAc7_RK73iOLFxS6djjCKFk0grpRn0wg5g=s1600'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEh3ypcux_-h8_K93DOh4R2wUzXs6G7lvJaAkanpI8ZPU5G0DNg6kLMC1zFmMG6j-SdBYl4g8_aKae09giOjyF9wJkfyW02cjX1UlKLGNmoPMAH5NH16dhqgLDmYdoM0RCYNAJX1DET34sSKF6Ur_omncBTxawzvBzgm8OB0k5P8CgdLWPJf4hv8agOdMsY=s1600'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEhUeZ3iPIgqbdokgx56Y9UUbhJM2dE6GlXmlPNcIQRP3wI2LaXWOs2AtSXqM2mF--m2VU-RXABgCKMwz9L2hkuXLoksuW6ZCJejIeJolgSolCg3px5txXyRRnXUK9oKXNbYYjsjqeBhqVA1SB3BktdIX0GEO3_bXsKNZHxsPQEJ8JVeVhoSGeM9HO5gV7M=s1600'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEiuFjqpdYSadT31C4WoL8GAokySau8Me52OeU5M4JPwDGYWsWKIF5kOvbpkfNW8clPWsFTixtxzaUng4skkhKmO_6EM1ZxFZZI1joSMejmTN_hLhUQJfeK9a43DhkpTIl2fOoWg22CFOjdqajqpp28nnO7bCjHntPGqaeIgQpEBuKg0-FVw9mQ7atkguRA=s1600'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEhn3aovpX4XfKsQjOkuPS9g8UqM7huO6SGQDZXR5WC8zeJSvnszeKC1G6uS01oQ4wl2BNSQAHazlgk8pMTbG_qc4N6xtE0mCbalOfwz5VmJ8dIiSiXmRTzQlGP9fo1BTpP7492queCEFGQkS5lqDVIgGPyPVsWO33ZIZdPs3ZrxstB-91jqkupaigKVvng=s1600'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEjDle2Z7jsfNmRNBaIXSUBjFNK_8T7BsQH8i1KWZ-9K8UA3KJpdUmB4LLqniUSnEz4flujyrb-h4QzNRtOV4S_pYZRyVAN7TXEL3MA4fnkWLv99MwwLIgps4cTRXy7_i2KUsIqa3bMjm8ZrUenFwB_eeE0jMxnrptzhYEBcSLx95KAK8WqZkjuw2pjtwvw=s1600'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEhWWiSrgFI_NKh35c9VsaXP8IidlWZYIkGQDzpnIhTn-VIEzf-UmW4_kYGHUDnLcwELFmkfDi90Fu4HVb71T5P_hojwYzCrgXLHmIj2TnHkz5NLlIllF2CVc8zmz2OTapA9efExtFJE1LmnxDaNjWKpbLbzgWWmap-dvsYwrHGylQg6fcNVIqJmEOAfURw=s1600'
+        alt='Gallery Image' />
+      <img
+        src='https://blogger.googleusercontent.com/img/a/AVvXsEgygkKuwkBfoFNhqhHj-p_JN1czP06kRe0cUig0pl4rDda4hE8Dj2n0_kiXijWeW0uxb-SIITKJt4Ffit4QMTa0PBjeobosuTY1IbEF0samchJ7o4Yd5yp1o5j8zCFI66N-7mMcTpltuIg8kGlRYLzVs2tuKDd_fqOVvuoLAO1Cja3TaXNJ8D_j_XGQUQs=s1600'
+        alt='Gallery Image' />
+    </div>
+  </div>
+
   <footer>
     &#169; 2026 Villa Octopus. Designed by Sherul Dhanushka.
   </footer>
@@ -3420,10 +3470,12 @@
       const mainContent = document.getElementById('main-content');
       const roomsSection = document.getElementById('rooms-section');
       const mealsSection = document.getElementById('meals-section');
+      const gallerySection = document.getElementById('gallery-section');
 
       if (homeView) homeView.style.display = 'none';
       if (mainContent) mainContent.style.display = 'none';
       if (mealsSection) mealsSection.style.display = 'none';
+      if (gallerySection) gallerySection.style.display = 'none';
       if (roomsSection) roomsSection.style.display = 'block';
 
       // Scroll to top
@@ -3439,13 +3491,37 @@
       const mainContent = document.getElementById('main-content');
       const roomsSection = document.getElementById('rooms-section');
       const mealsSection = document.getElementById('meals-section');
+      const gallerySection = document.getElementById('gallery-section');
 
       if (roomsSection) roomsSection.style.display = 'none';
       if (mealsSection) mealsSection.style.display = 'none';
+      if (gallerySection) gallerySection.style.display = 'none';
       if (homeView) homeView.style.display = 'block';
       if (mainContent) mainContent.style.display = 'block';
 
       // Scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    function showGallery() {
+      const homeView = document.getElementById('home-view');
+      const mainContent = document.getElementById('main-content');
+      const roomsSection = document.getElementById('rooms-section');
+      const mealsSection = document.getElementById('meals-section');
+      const gallerySection = document.getElementById('gallery-section');
+
+      if (homeView) homeView.style.display = 'none';
+      if (mainContent) mainContent.style.display = 'none';
+      if (roomsSection) roomsSection.style.display = 'none';
+      if (mealsSection) mealsSection.style.display = 'none';
+      if (gallerySection) gallerySection.style.display = 'block';
+
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileNav) mobileNav.classList.remove('active');
+
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -3458,11 +3534,13 @@
       const mainContent = document.getElementById('main-content');
       const roomsSection = document.getElementById('rooms-section');
       const mealsSection = document.getElementById('meals-section');
+      const gallerySection = document.getElementById('gallery-section');
 
       if (homeView) homeView.style.display = 'none';
       if (mainContent) mainContent.style.display = 'none';
       if (roomsSection) roomsSection.style.display = 'none';
       if (mealsSection) mealsSection.style.display = 'block';
+      if (gallerySection) gallerySection.style.display = 'none';
 
       // Close mobile menu if open
       const mobileNav = document.getElementById('mobileNav');
