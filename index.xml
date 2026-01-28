@@ -1209,7 +1209,9 @@
   <header>
     <nav>
       <a class='logo logo-link' href='#home' onclick='showHome()'>
-        <img class='logo-img' src='https://blogger.googleusercontent.com/img/a/AVvXsEhUNQ3AO2WzB58vxYbiE4LnWILH9r9zGfE_XQtXajReweKcPg6DtHVdHSzUGpbesqXc5Gxh08EiTV-HQaEzjQ1cQjgns8O2cRimG6ZhByymNtMkhD57TktYUEk8vvEambXB0zYPpnlZhXsEVv0o1-mXp8e7qmFAmM1WGweKiatydEVh-QCNjnKnATZYOdw' alt='Villa Octopus'/>
+        <img class='logo-img'
+          src='https://blogger.googleusercontent.com/img/a/AVvXsEhUNQ3AO2WzB58vxYbiE4LnWILH9r9zGfE_XQtXajReweKcPg6DtHVdHSzUGpbesqXc5Gxh08EiTV-HQaEzjQ1cQjgns8O2cRimG6ZhByymNtMkhD57TktYUEk8vvEambXB0zYPpnlZhXsEVv0o1-mXp8e7qmFAmM1WGweKiatydEVh-QCNjnKnATZYOdw'
+          alt='Villa Octopus' />
       </a>
       <div class='nav-links'>
         <a href='javascript:void(0)' onclick='showHome()'>Home</a>
@@ -2299,7 +2301,7 @@
               <div class='contact-text'>
                 <h4>Address</h4>
                 <div class='contact-text-content'>
-                  Villa Hundira, Talahena,<br />Negombo, Sri Lanka
+                  Galle road, Maggona. Srilanka.<br />(Infront of saloon imro, few steps away from uswalla beach)
                 </div>
               </div>
             </div>
@@ -2318,16 +2320,12 @@
                 <h4>Phone</h4>
                 <div class='contact-text-content phone-group'>
                   <div class='phone-number'>
-                    <span class='phone-label'>Primary</span>
-                    <a href='tel:+94777682347'>+94 77 768 2347</a>
+                    <span class='phone-label'>Usha</span>
+                    <a href='tel:+94753767342'>+94 75 376 7342</a>
                   </div>
                   <div class='phone-number'>
-                    <span class='phone-label'>Secondary</span>
-                    <a href='tel:+94766773912'>+94 76 677 3912</a>
-                  </div>
-                  <div class='phone-number'>
-                    <span class='phone-label'>Landline</span>
-                    <a href='tel:+94312225420'>+94 31 222 5420</a>
+                    <span class='phone-label'>Shehan</span>
+                    <a href='tel:+94779242134'>+94 77 924 2134</a>
                   </div>
                 </div>
               </div>
@@ -2345,25 +2343,65 @@
               <div class='contact-text'>
                 <h4>Email</h4>
                 <div class='contact-text-content'>
-                  <a href='mailto:info@villahundira.com'>info@villahundira.com</a>
+                  <a href='mailto:shehanpeiris222@gmail.com'>shehanpeiris222@gmail.com</a>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Minimalist Form -->
-          <form class='modern-form' onsubmit='event.preventDefault(); alert("Thank you for your message!");'>
+          <form class='modern-form' id='contactForm' onsubmit='return sendToWhatsApp(event);'>
             <div class='input-group'>
-              <input type='text' class='styled-input' placeholder='Your Name' required='required' />
+              <input type='text' id='userName' class='styled-input' placeholder='Your Name' required='required' />
             </div>
             <div class='input-group'>
-              <input type='email' class='styled-input' placeholder='Your Email' required='required' />
+              <input type='email' id='userEmail' class='styled-input' placeholder='Your Email' required='required' />
             </div>
             <div class='input-group'>
-              <input type='text' class='styled-input' placeholder='Message' required='required' />
+              <input type='text' id='userMessage' class='styled-input' placeholder='Message' required='required' />
             </div>
-            <button type='submit' class='submit-btn'>Send Message</button>
+            <button type='submit' class='submit-btn'>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                </path>
+              </svg>
+              Send WhatsApp Message
+            </button>
           </form>
+
+          <script>
+            //<![CDATA[
+            function sendToWhatsApp(event) {
+              event.preventDefault();
+
+              // Get form values
+              var name = document.getElementById('userName').value;
+              var email = document.getElementById('userEmail').value;
+              var message = document.getElementById('userMessage').value;
+
+              // Create WhatsApp message
+              var whatsappMessage = 'Hello! I am ' + name + '.%0A';
+              whatsappMessage += 'Email: ' + email + '%0A';
+              whatsappMessage += 'Message: ' + message;
+
+              // WhatsApp number (without + and spaces)
+              var whatsappNumber = '94778626300';
+
+              // Create WhatsApp URL
+              var whatsappURL = 'https://wa.me/' + whatsappNumber + '?text=' + whatsappMessage;
+
+              // Open WhatsApp in new tab
+              window.open(whatsappURL, '_blank');
+
+              // Reset form
+              document.getElementById('contactForm').reset();
+
+              return false;
+            }
+            //]]>
+          </script>
         </div>
 
         <!-- RIGHT: Map -->
@@ -2395,23 +2433,27 @@
             margin-bottom: 24px;
             width: 100%;
           }
+
           .modern-room-grid img {
             width: 100%;
             height: 240px;
             object-fit: cover;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: block;
           }
+
           .modern-room-grid img:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
           }
+
           @media (max-width: 768px) {
             .modern-room-grid {
-               gap: 10px;
+              gap: 10px;
             }
+
             .modern-room-grid img {
               height: 160px;
               border-radius: 8px;
@@ -2434,9 +2476,12 @@
         </div>
         <div class='room-content-dark'>
           <h3 class='room-title-dark' style='margin-bottom: 10px;'>THREE A/C ROOMS</h3>
-          <div class='room-description-dark' style='color: #ccc; margin-bottom: 20px; line-height: 1.6; font-size: 0.95rem;'>
-             <p style='margin-bottom: 8px;'>Three spacious A/C rooms available. <strong style='color: #8bb174;'>One room features hot water.</strong></p>
-             <p>Guests enjoy free tea &amp; coffee for self-cooking. The kitchen is fully equipped with free gas, blenders, rice cookers, a fridge, and gas cookers.</p>
+          <div class='room-description-dark'
+            style='color: #ccc; margin-bottom: 20px; line-height: 1.6; font-size: 0.95rem;'>
+            <p style='margin-bottom: 8px;'>Three spacious A/C rooms available. <strong style='color: #8bb174;'>One room
+                features hot water.</strong></p>
+            <p>Guests enjoy free tea &amp; coffee for self-cooking. The kitchen is fully equipped with free gas,
+              blenders, rice cookers, a fridge, and gas cookers.</p>
           </div>
           <div class='amenities-list-dark' style='flex-wrap: wrap; gap: 15px;'>
             <!-- Air Condition -->
@@ -2452,9 +2497,9 @@
             <div class='amenity-item-dark' title='Non-Smoking'>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
-                 <path d="M2 20h20M2 16h20M4 12h16M4 8h16M2 4h20" />
+                <path d="M2 20h20M2 16h20M4 12h16M4 8h16M2 4h20" />
               </svg>
-               <span>Kitchen</span>
+              <span>Kitchen</span>
             </div>
             <!-- Attached Bathroom -->
             <div class='amenity-item-dark' title='Attached Bathroom'>
@@ -3376,9 +3421,11 @@
 
 
   <!-- GALLERY SECTION -->
-  <div id='gallery-section' style='display: none; background-color: #fdfbf7; padding: 100px 5% 80px; min-height: 100vh;'>
+  <div id='gallery-section'
+    style='display: none; background-color: #fdfbf7; padding: 100px 5% 80px; min-height: 100vh;'>
     <div class='gallery-page-header' style='text-align: center; margin-bottom: 60px;'>
-      <h2 style='font-size: clamp(2.5rem, 5vw, 3.5rem); color: #1a3a3a; margin-bottom: 15px; letter-spacing: 2px;'>GALLERY</h2>
+      <h2 style='font-size: clamp(2.5rem, 5vw, 3.5rem); color: #1a3a3a; margin-bottom: 15px; letter-spacing: 2px;'>
+        GALLERY</h2>
       <p style='font-family: "Outfit", sans-serif; font-size: 1.1rem; color: #666;'>A glimpse into our sanctuary</p>
     </div>
 
@@ -3403,8 +3450,8 @@
       .gallery-grid img:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-            position: relative;
+        z-index: 10;
+        position: relative;
       }
 
       @media (max-width: 768px) {
@@ -3427,7 +3474,7 @@
       <img
         src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEEe6ZCyTIHXYGqoHFC_XXwe857DeTxp5z3lWogCJzG4Qh55yFeHl483W6sBBv3SRKhAdfMtmbq0jpFn_Z9PgApz1HW_4lZp7mEykCo7SSzN2si1oJUokNwDyqUuGJKmvJdWOCSpak_EB83GUUt8xJ8I3mbphbjmBN2PoT8OSVuq5vpdtQcALeflbFmfk/s1600/WhatsApp%20Image%202026-01-24%20at%207.33.00%20PM.jpeg'
         alt='Gallery Image' />
-     
+
       <img
         src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMFWmEGq_Cv1u8I6B2rzqupb2_CSyTuy1zDxTH_TGz_iDbEy57dMUESlllJ3FgWDmrsRvc0rkq9q3YcFeRNJ0EEI8hD0KHqpSW5Oy8oWGF13S7jtl4ewqSx5fjUMPMKiXlTmj2ab4rUjUjFJRE2REGvjc74tIIkYUTn3cgOXVH4dSuYxIIkFMMrqUZzGg/s1600/WhatsApp%20Image%202026-01-23%20at%2011.56.47%20PM.jpeg'
         alt='Gallery Image' />
