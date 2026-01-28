@@ -563,12 +563,30 @@
         flex-direction: column; 
         gap: 30px;
     }
+
+    .room-details {
+        width: 100%;
+        min-width: auto;
+        text-align: center;
+        padding: 0 10px;
+    }
+    
+    .room-title {
+        font-size: 2.5rem;
+    }
+
+    .amenities-bar {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
     
     /* Force images into a single vertical column */
     .room-visuals { 
         flex-direction: column; /* Stack the main image and secondary images vertically */
         height: auto; 
         width: 100%;
+        min-width: 0; /* Reset min-width to prevent overflow */
         gap: 10px;
     }
     
@@ -786,6 +804,17 @@
             box-shadow: 0 10px 25px rgba(26, 58, 58, 0.2);
         }
 
+        @media (max-width: 600px) {
+            .submit-btn {
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+        }
+
         .map-frame {
             width: 100%;
             height: 100%;
@@ -811,10 +840,13 @@
                 height: 400px;
             }
             .contact-section-wrapper {
-                padding: 60px 5%;
+                padding: 40px 5%;
             }
             .contact-header h2 {
-                font-size: 2.8rem;
+                font-size: 2rem;
+            }
+            .contact-item {
+                 gap: 15px;
             }
         }
 
@@ -1254,15 +1286,57 @@
       </div>
 
       <!-- From MICHS to Octopus Story -->
-      <div style='max-width: 1000px; margin: 0 auto; padding: 40px 20px;'>
-        <h3
-          style='text-align: center; font-size: 2rem; color: #1a3a3a; margin-bottom: 40px; letter-spacing: 1px; text-transform: uppercase;'>
-          From MICHS to Octopus</h3>
+      <style>
+        .story-container {
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 40px 20px;
+        }
+        .story-title {
+          text-align: center;
+          font-size: 2rem;
+          color: #1a3a3a;
+          margin-bottom: 40px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        .story-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 30px;
+        }
+        .story-card {
+          background: white;
+          padding: 30px;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+          text-align: center;
+          transition: transform 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+          .story-container {
+            padding: 20px 15px;
+          }
+          .story-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+          }
+          .story-grid {
+            grid-template-columns: 1fr; /* Force single column on mobile */
+            gap: 20px;
+          }
+          .story-card {
+            padding: 20px;
+          }
+        }
+      </style>
+      <div class="story-container">
+        <h3 class="story-title">From MICHS to Octopus</h3>
 
-        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;'>
+        <div class="story-grid">
           <!-- Our Roots -->
-          <div
-            style='background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;'>
+          <div class="story-card">
             <div style='margin-bottom: 20px;'>
               <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#1a3a3a" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" style='margin: 0 auto;'>
@@ -1279,8 +1353,7 @@
           </div>
 
           <!-- New Concept -->
-          <div
-            style='background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;'>
+          <div class="story-card">
             <div style='margin-bottom: 20px;'>
               <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#1a3a3a" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" style='margin: 0 auto;'>
@@ -1294,8 +1367,7 @@
           </div>
 
           <!-- The Vibe -->
-          <div
-            style='background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;'>
+          <div class="story-card">
             <div style='margin-bottom: 20px;'>
               <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#1a3a3a" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" style='margin: 0 auto;'>
