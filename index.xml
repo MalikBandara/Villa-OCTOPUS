@@ -169,7 +169,7 @@
         /* --- CONTENT SECTIONS --- */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), 
                         url('https://blogger.googleusercontent.com/img/a/AVvXsEgD2NGvF3qfth48OT0P2cjNALDuQlhLBC_AlHMCSQSxDPdWlMzncnPfitiMF6-H89o4o2Ad52FiNhBJTU0gdc14H7TXRyish0MOvW8xQyBTkJ7MeqC1D5QEWiU0ylLmO0cC89iG0DyOnYq3Zeb0DMabezu8YS1OktzgfQuZ9zIJkqdh8Nnsx7MD_aSRj0M=w1920');
             background-size: cover; 
             background-position: center;
@@ -1316,19 +1316,79 @@
     <section id='rooms'>
       <div class='room-container'>
         <div class='room-details'>
-          <h2 class='room-title'>BEACH SUITE</h2>
+          <h2 class='room-title'>BEACH SUITE @ VILLA OCTOPUS</h2>
           <div class='room-description'>
-            <p>Make yourself at home on the 2nd floor where you can lounge with your loved one on a four postered bed;
-              overlooking the picturesque lagoon through our large windows.</p>
-            <br />
-            <p>With the comfort of air-conditioning, his and her bathrooms and spacious sitting areas- an additional bed
-              is all it takes to make this private suite a family room.</p>
-          </div>
-          <div class='amenities-bar'>
-            <span>Wifi</span>
-            <span>Cable TV</span>
-            <span>Safe</span>
-            <span>Amenities</span>
+            <p style='font-size: 1.1rem; margin-bottom: 25px;'>Welcome to our beautiful holiday home on the 2nd floor.
+              It is perfect for relaxing with your family.</p>
+
+            <!-- Best Location -->
+            <div style='margin-bottom: 25px;'>
+              <h3
+                style='color: #1a3a3a; font-size: 1.3rem; margin-bottom: 6px; display: flex; align-items: center; gap: 10px;'>
+                <span style='font-size: 1.5rem;'>🌊</span> Best Location
+              </h3>
+              <p style='line-height: 1.8;'><strong style='font-weight: bold;'>Uswalla</strong> and <strong
+                  style='font-weight: bold;'>Kudawa</strong> beaches. Gifted beaches
+                with a <strong style='font-weight: bold;'>nice view</strong></p>
+            </div>
+
+            <!-- Quiet & Relaxing -->
+            <div style='margin-bottom: 25px;'>
+              <h3
+                style='color: #1a3a3a; font-size: 1.3rem; margin-bottom: 6px; display: flex; align-items: center; gap: 10px;'>
+                <span style='font-size: 1.5rem;'>😴</span> Quiet &amp; Relaxing
+              </h3>
+              <p style='line-height: 1.8;'>Very calm place. Can <strong style='font-weight: bold;'>hear the sound of the
+                  beach waves</strong> from
+                your room.</p>
+            </div>
+
+            <!-- Why Stay Here -->
+            <div style='margin-bottom: 20px;'>
+              <h3
+                style='color: #1a3a3a; font-size: 1.3rem; margin-bottom: 18px; display: flex; align-items: center; gap: 10px;'>
+                <span style='font-size: 1.5rem;'>✅</span> Why Stay Here?
+              </h3>
+              <div style='display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;'>
+                <!-- Free WiFi -->
+                <div
+                  style='display: flex; flex-direction: column; align-items: center; text-align: center; padding: 15px; background: #f8fafa; border-radius: 12px; transition: transform 0.3s ease;'>
+                  <svg width='30' height='25' viewBox='0 0 24 24' fill='none' stroke='#1a3a3a' stroke-width='2'
+                    stroke-linecap='round' stroke-linejoin='round' style='margin-bottom: 10px;'>
+                    <path d='M5 12.55a11 11 0 0 1 14.08 0' />
+                    <path d='M1.42 9a16 16 0 0 1 21.16 0' />
+                    <path d='M8.53 16.11a6 6 0 0 1 6.95 0' />
+                    <line x1='12' y1='20' x2='12.01' y2='20' />
+                  </svg>
+                  <span style='color: #1a3a3a; font-size: 0.95rem; font-weight: 500;'>Free WiFi</span>
+                </div>
+
+                <!-- Cable TV -->
+                <div
+                  style='display: flex; flex-direction: column; align-items: center; text-align: center; padding: 15px; background: #f8fafa; border-radius: 12px; transition: transform 0.3s ease;'>
+                  <svg width='30' height='25' viewBox='0 0 24 24' fill='none' stroke='#1a3a3a' stroke-width='2'
+                    stroke-linecap='round' stroke-linejoin='round' style='margin-bottom: 10px;'>
+                    <rect x='2' y='7' width='20' height='15' rx='2' ry='2' />
+                    <polyline points='17 2 12 7 7 2' />
+                  </svg>
+                  <span style='color: #1a3a3a; font-size: 0.95rem; font-weight: 500;'>Cable TV</span>
+                </div>
+
+                <!-- Safe for Families -->
+                <div
+                  style='display: flex; flex-direction: column; align-items: center; text-align: center; padding: 15px; background: #f8fafa; border-radius: 12px; transition: transform 0.3s ease;'>
+                  <svg width='30' height='25' viewBox='0 0 24 24' fill='none' stroke='#1a3a3a' stroke-width='2'
+                    stroke-linecap='round' stroke-linejoin='round' style='margin-bottom: 10px;'>
+                    <path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' />
+                    <path d='M9 12l2 2 4-4' />
+                  </svg>
+                  <span style='color: #1a3a3a; font-size: 0.95rem; font-weight: 500;'>Safe</span>
+                </div>
+              </div>
+            </div>
+
+            <p style='font-size: 1.15rem; font-weight: 600; color: #1a3a3a; margin-top: 30px; font-style: italic;'>Come
+              and enjoy the beach life at Villa Octopus!</p>
           </div>
         </div>
         <div class='room-visuals'>
@@ -1338,7 +1398,7 @@
             <img alt='Suite detail'
               src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQ6gEFeBFdGUVs1R2vxGOtHRP0QZxhQAZBWfO12mLsWhIzNDJMxqfNH0vRUrSk4-B_cEjX8DuSiMbfTgOkMEPBhTawwcw-HrL5bUySWrmxGRUogRLwjcUC6xOZ39wxM85y94q2T-pp_Pflfot9RJInNgfc9YOChK3fW3FVm18rfD2T_dFX2mkeYSt4ZGA/s320/WhatsApp%20Image%202026-01-23%20at%206.46.25%20PM%20(2).jpeg' />
             <img alt='Suite detail'
-              src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrupzeU1astZfuUMNLiBP8J_MHCNTqYM9COcbGT4IyGZb-UkjM3paqJe3XlrUjR28RMDmndHXRAfLBcN9xCTATJSnH864iitX3g9xAyFZfoxWlDVK-3rucTTtXEVJki1HAId9blQp824Me0mRAz3LBHs31T91XLuJBEZMxmApNZtXI54U7E0KPkzjSnkk/s320/WhatsApp%20Image%202026-01-23%20at%206.46.26%20PM.jpeg' />
+              src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKlfWR4gA9Q-sgEheM-6v_i-yRO-fEFn0WDPv43XQoWm25RLuoynKg1oYQIoTsnUx4GltwLon0U09rmzhwUYIndhgozH8XKXRBWfryXQeUR7qMWP1Tj4lPP2gNjb5Ufp4YH0-NYtIF8UdEuASRBBxIqdPBm60Jl7INzB6h3xbBaWO56p_X0VBAu066s90/s320/WhatsApp%20Image%202026-01-23%20at%206.46.25%20PM%20(1).jpeg' />
           </div>
           <div class='main-image-wrapper'>
             <img alt='Lagoon Suite'
@@ -2840,15 +2900,7 @@
         </b:if>
       </b:includable>
       <b:includable id='feedLinksBody' var='links'>
-        <div class='feed-links'>
-          <data:messages.subscribeTo />
-          <b:loop values='data:links' var='f'>
-            <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>
-              <data:f.name /> (
-              <data:f.feedType />)
-            </a>
-          </b:loop>
-        </div>
+        <!-- Feed links removed -->
       </b:includable>
       <b:includable id='footerBylines'>
         <b:if cond='data:widgets.Blog.first.footerBylines'>
@@ -3509,7 +3561,7 @@
   </div>
 
   <footer>
-    &#169; 2026 Villa Octopus. Designed by Sherul Dhanushka.
+    &#169; 2026 Villa Octopus. Designed by SMART DEV.
   </footer>
 
   <script type='text/javascript'>
