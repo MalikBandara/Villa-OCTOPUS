@@ -221,6 +221,7 @@
             padding: 80px 5%; 
             max-width: 1300px; 
             margin: 0 auto; 
+            scroll-margin-top: 120px; /* Prevent fixed header overlap */
         }
 
         /* ROOMS LAYOUT */
@@ -608,6 +609,98 @@
     .hero h1 {
         font-size: 2.8rem;
         letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust container padding for very small screens */
+    section {
+        padding: 40px 15px !important;
+    }
+
+    /* Beach Suite Section adjustments */
+    .room-title {
+        font-size: 1.8rem !important; /* Smaller title to fit 320px */
+        line-height: 1.2;
+    }
+
+    .room-description {
+       padding: 0 5px; /* Ensure text doesn't hit edges too hard */
+    }
+    
+    /* FIX: Allow these to shrink to fit small screens (fixes 320px overflow) */
+    .room-details, 
+    .room-visuals {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 2x2 Grid Layout for Images on Mobile */
+    .room-visuals {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        height: auto !important;
+    }
+
+    /* Flatten the structure to allow grid placement */
+    .secondary-images,
+    .main-image-wrapper {
+        display: contents !important;
+    }
+
+    /* Target all images inside the flattened structure */
+    .room-visuals img {
+        width: 100% !important;
+        height: 150px !important; /* Square-ish look */
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 0 !important;
+    }
+
+    /* Contact Section Fixes */
+    .contact-header h2 {
+        font-size: 2rem !important; /* Reduced from clamp min 3rem */
+        letter-spacing: 1px !important;
+        word-wrap: break-word; /* Ensure long words break if necessary */
+    }
+    
+    .contact-text-content {
+        font-size: 1rem !important;
+    }
+
+    .submit-btn {
+        width: 100% !important; /* Full width button */
+        padding: 15px 10px !important; /* Reduced side padding */
+        font-size: 0.9rem !important;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap; /* Prevent breaking into two lines if possible, or handle via font size */
+    }
+    
+    .contact-section-wrapper {
+        padding: 40px 15px !important;
+    }
+
+    /* Accommodation Section Fixes */
+    .rooms-page-header h2 {
+        font-size: 1.8rem !important; /* Fix title overflow */
+        word-wrap: break-word;
+        letter-spacing: 2px !important;
+    }
+
+    #rooms-section {
+        padding: 40px 15px !important;
+    }
+
+    .modern-room-grid {
+        gap: 8px !important; /* Reduce gap to save space */
+    }
+    
+    .modern-room-grid img {
+        height: 120px !important; /* Proportional height for smaller width */
+        border-radius: 8px !important;
     }
 }
 
@@ -1254,12 +1347,12 @@
       </div>
 
       <!-- From MICHS to Octopus Story -->
-      <div style='max-width: 1000px; margin: 0 auto; padding: 40px 20px;'>
+      <div style='max-width: 1000px; margin: 0 auto; padding: 40px 10px;'>
         <h3
           style='text-align: center; font-size: 2rem; color: #1a3a3a; margin-bottom: 40px; letter-spacing: 1px; text-transform: uppercase;'>
           From MICHS to Octopus</h3>
 
-        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;'>
+        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px;'>
           <!-- Our Roots -->
           <div
             style='background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;'>
