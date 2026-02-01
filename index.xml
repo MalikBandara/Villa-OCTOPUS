@@ -1335,7 +1335,7 @@
     <div class='hero' id='home'>
       <h1>VILLA OCTOPUS</h1>
       <p>Newly Reimagined. Steps from the Sea.</p>
-      <a class='cta-button' href='#contact'>Book Your Stay</a>
+      <a class='cta-button' href='#booking'>Book Your Stay</a>
     </div>
 
     <section id='about' style='padding: 40px 5%;'>
@@ -2371,41 +2371,55 @@
       </div>
 
       <div class='booking-grid'>
+        <!-- Airbnb -->
+        <a href='https://airbnb.com/h/villaoctopuslk' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_Bélo.svg/2560px-Airbnb_Logo_Bélo.svg.png'
+            alt='Airbnb' class='platform-logo' />
+        </a>
+
         <!-- Booking.com -->
-        <a href='https://www.booking.com' target='_blank' class='booking-card'>
+        <a href='https://www.booking.com/Share-q321CG' target='_blank' class='booking-card'>
           <span class='book-via-text'>Book Via</span>
           <img
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/320px-Booking.com_logo.svg.png'
             alt='Booking.com' class='platform-logo' />
         </a>
 
-        <!-- Trip.com -->
-        <a href='https://www.trip.com' target='_blank' class='booking-card'>
-          <span class='book-via-text'>Book Via</span>
-          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/trip.com-logo.png' alt='Trip.com'
-            class='platform-logo' />
-        </a>
-
-        <!-- Hotels.com -->
-        <a href='https://www.hotels.com' target='_blank' class='booking-card'>
-          <span class='book-via-text'>Book Via</span>
-          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/hotels-.com-logo.png' alt='Hotels.com'
-            class='platform-logo' />
-        </a>
-
-        <!-- Expedia -->
-        <a href='https://www.expedia.com' target='_blank' class='booking-card'>
-          <span class='book-via-text'>Book Via</span>
-          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/wxpedia-logo.png' alt='Expedia'
-            class='platform-logo' />
-        </a>
-
-        <!-- Agoda -->
-        <a href='https://www.agoda.com' target='_blank' class='booking-card'>
+        <a href='https://airbnb.com/h/villaoctopuslk' target='_blank' class='booking-card'>
           <span class='book-via-text'>Book Via</span>
           <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/agoda-logo.png' alt='Agoda'
             class='platform-logo' />
         </a>
+
+        <!-- Trip.com -->
+        <!-- <a href='https://www.trip.com' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/trip.com-logo.png' alt='Trip.com'
+            class='platform-logo' />
+        </a> -->
+
+        <!-- Hotels.com -->
+        <!-- <a href='https://www.hotels.com' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/hotels-.com-logo.png' alt='Hotels.com'
+            class='platform-logo' />
+        </a> -->
+
+        <!-- Expedia -->
+        <!-- <a href='https://www.expedia.com' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/wxpedia-logo.png' alt='Expedia'
+            class='platform-logo' />
+        </a> -->
+
+        <!-- Agoda -->
+        <!-- <a href='https://www.agoda.com' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/agoda-logo.png' alt='Agoda'
+            class='platform-logo' />
+        </a> -->
       </div>
 
       <div style='text-align: center; margin-top: 60px; position: relative; z-index: 1;'>
