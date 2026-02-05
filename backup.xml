@@ -221,6 +221,7 @@
             padding: 80px 5%; 
             max-width: 1300px; 
             margin: 0 auto; 
+            scroll-margin-top: 120px; /* Prevent fixed header overlap */
         }
 
         /* ROOMS LAYOUT */
@@ -608,6 +609,98 @@
     .hero h1 {
         font-size: 2.8rem;
         letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust container padding for very small screens */
+    section {
+        padding: 40px 15px !important;
+    }
+
+    /* Beach Suite Section adjustments */
+    .room-title {
+        font-size: 1.8rem !important; /* Smaller title to fit 320px */
+        line-height: 1.2;
+    }
+
+    .room-description {
+       padding: 0 5px; /* Ensure text doesn't hit edges too hard */
+    }
+    
+    /* FIX: Allow these to shrink to fit small screens (fixes 320px overflow) */
+    .room-details, 
+    .room-visuals {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 2x2 Grid Layout for Images on Mobile */
+    .room-visuals {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        height: auto !important;
+    }
+
+    /* Flatten the structure to allow grid placement */
+    .secondary-images,
+    .main-image-wrapper {
+        display: contents !important;
+    }
+
+    /* Target all images inside the flattened structure */
+    .room-visuals img {
+        width: 100% !important;
+        height: 150px !important; /* Square-ish look */
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 0 !important;
+    }
+
+    /* Contact Section Fixes */
+    .contact-header h2 {
+        font-size: 2rem !important; /* Reduced from clamp min 3rem */
+        letter-spacing: 1px !important;
+        word-wrap: break-word; /* Ensure long words break if necessary */
+    }
+    
+    .contact-text-content {
+        font-size: 1rem !important;
+    }
+
+    .submit-btn {
+        width: 100% !important; /* Full width button */
+        padding: 15px 10px !important; /* Reduced side padding */
+        font-size: 0.9rem !important;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap; /* Prevent breaking into two lines if possible, or handle via font size */
+    }
+    
+    .contact-section-wrapper {
+        padding: 40px 15px !important;
+    }
+
+    /* Accommodation Section Fixes */
+    .rooms-page-header h2 {
+        font-size: 1.8rem !important; /* Fix title overflow */
+        word-wrap: break-word;
+        letter-spacing: 2px !important;
+    }
+
+    #rooms-section {
+        padding: 40px 15px !important;
+    }
+
+    .modern-room-grid {
+        gap: 8px !important; /* Reduce gap to save space */
+    }
+    
+    .modern-room-grid img {
+        height: 120px !important; /* Proportional height for smaller width */
+        border-radius: 8px !important;
     }
 }
 
@@ -1242,7 +1335,7 @@
     <div class='hero' id='home'>
       <h1>VILLA OCTOPUS</h1>
       <p>Newly Reimagined. Steps from the Sea.</p>
-      <a class='cta-button' href='#contact'>Book Your Stay</a>
+      <a class='cta-button' href='#booking'>Book Your Stay</a>
     </div>
 
     <section id='about' style='padding: 40px 5%;'>
@@ -1254,12 +1347,12 @@
       </div>
 
       <!-- From MICHS to Octopus Story -->
-      <div style='max-width: 1000px; margin: 0 auto; padding: 40px 20px;'>
+      <div style='max-width: 1000px; margin: 0 auto; padding: 40px 10px;'>
         <h3
           style='text-align: center; font-size: 2rem; color: #1a3a3a; margin-bottom: 40px; letter-spacing: 1px; text-transform: uppercase;'>
           From MICHS to Octopus</h3>
 
-        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;'>
+        <div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px;'>
           <!-- Our Roots -->
           <div
             style='background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease;'>
@@ -1318,7 +1411,7 @@
         <div class='room-details'>
           <h2 class='room-title'>BEACH SUITE @ VILLA OCTOPUS</h2>
           <div class='room-description'>
-            <p style='font-size: 1.1rem; margin-bottom: 25px;'>Welcome to our beautiful holiday home on the 2nd floor.
+            <p style='font-size: 1.1rem; margin-bottom: 25px;'>Welcome to our beautiful holiday home.
               It is perfect for relaxing with your family.</p>
 
             <!-- Best Location -->
@@ -2278,41 +2371,55 @@
       </div>
 
       <div class='booking-grid'>
+        <!-- Airbnb -->
+        <a href='https://airbnb.com/h/villaoctopuslk' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_Bélo.svg/2560px-Airbnb_Logo_Bélo.svg.png'
+            alt='Airbnb' class='platform-logo' />
+        </a>
+
         <!-- Booking.com -->
-        <a href='https://www.booking.com' target='_blank' class='booking-card'>
+        <a href='https://www.booking.com/Share-q321CG' target='_blank' class='booking-card'>
           <span class='book-via-text'>Book Via</span>
           <img
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/320px-Booking.com_logo.svg.png'
             alt='Booking.com' class='platform-logo' />
         </a>
 
-        <!-- Trip.com -->
-        <a href='https://www.trip.com' target='_blank' class='booking-card'>
-          <span class='book-via-text'>Book Via</span>
-          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/trip.com-logo.png' alt='Trip.com'
-            class='platform-logo' />
-        </a>
-
-        <!-- Hotels.com -->
-        <a href='https://www.hotels.com' target='_blank' class='booking-card'>
-          <span class='book-via-text'>Book Via</span>
-          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/hotels-.com-logo.png' alt='Hotels.com'
-            class='platform-logo' />
-        </a>
-
-        <!-- Expedia -->
-        <a href='https://www.expedia.com' target='_blank' class='booking-card'>
-          <span class='book-via-text'>Book Via</span>
-          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/wxpedia-logo.png' alt='Expedia'
-            class='platform-logo' />
-        </a>
-
-        <!-- Agoda -->
-        <a href='https://www.agoda.com' target='_blank' class='booking-card'>
+        <a href='https://airbnb.com/h/villaoctopuslk' target='_blank' class='booking-card'>
           <span class='book-via-text'>Book Via</span>
           <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/agoda-logo.png' alt='Agoda'
             class='platform-logo' />
         </a>
+
+        <!-- Trip.com -->
+        <!-- <a href='https://www.trip.com' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/trip.com-logo.png' alt='Trip.com'
+            class='platform-logo' />
+        </a> -->
+
+        <!-- Hotels.com -->
+        <!-- <a href='https://www.hotels.com' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/hotels-.com-logo.png' alt='Hotels.com'
+            class='platform-logo' />
+        </a> -->
+
+        <!-- Expedia -->
+        <!-- <a href='https://www.expedia.com' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/wxpedia-logo.png' alt='Expedia'
+            class='platform-logo' />
+        </a> -->
+
+        <!-- Agoda -->
+        <!-- <a href='https://www.agoda.com' target='_blank' class='booking-card'>
+          <span class='book-via-text'>Book Via</span>
+          <img src='https://naturesblissholidays.com/wp-content/uploads/2023/12/agoda-logo.png' alt='Agoda'
+            class='platform-logo' />
+        </a> -->
       </div>
 
       <div style='text-align: center; margin-top: 60px; position: relative; z-index: 1;'>
@@ -2528,10 +2635,10 @@
             src='https://blogger.googleusercontent.com/img/a/AVvXsEhyuqdNeIhIL96uo0_Ug6cCShNO7yt7lgocTkW1PjEudzTIsQPMrdvXtG-E_y8skqRIZRhB3Ht7f-dkdmiuyTdPYQUKuH7Mt9-_jGLslaCQheOW_rMOr9YC4gMNUKSkLTtQgTJCFXhQGdNKEIqbrKbhJZWhOtNuooyH7Vj4JFuj45pXp5M6MaM9At92P3A'
             alt='Attached Bathroom' />
           <img
-            src='https://blogger.googleusercontent.com/img/a/AVvXsEjeISmwOYn3ZleD5LpJfaXFEydaH-tHoqPjv5FMt4GFFYevJ-cGvUdjBk0BcCpvtvddwXH535JBujr94CmSBuklrv_4-z2RsQWViV3eZDH4WovfiJMxcCVgbIjgRo5FLNDNLJB3huTtXzpfnzXob2hvSeVk_nl8_kkseagwyik-iV9eXcdAFpnsJ9bQXwE'
+            src='https://blogger.googleusercontent.com/img/a/AVvXsEgpZOQKvzyNBb_my6bm0A2QRWThYLLZzOjH7UyAW81o_Ykp_lrYBkp0kS0D9BaowQGwez6wihoC13Fr3dRgwWbBQXgRKP95NocAqXgq070lL-Sgf06A6L8sW9DwO579yGTSYtPpJ2eUyYYn0DRKAMW_k2xs9PEeBnS3A33dXu5zONwMnCoJnEZ0SjTSIH4'
             alt='Room Interior' />
           <img
-            src='https://blogger.googleusercontent.com/img/a/AVvXsEgBpkC-s1qKEheB1Kg7D5Y4E9WuwA2rgXMbQr8YaXihKuhX1Pgnmu223PSZX4LTY7kA3J15PMxU63EESPtEOVCQURI-N6PhUCuNB5sY5IjvZOPXNxonGvQ9mn_c4KGXgt5ZGvD_tqTuDZB3eL8CLFkmtzuNY77XfHJPb0WmasbpHsrJWtCr6GzQYVbE7Ik'
+            src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyAKU9wy3AUqLF2tu06sGW2xuhf8cq02PoayGbd98uWaKK4PUPF8ZWLCtGR9gNX6cCLD9GX5EBY_OygmK-trdN7KB0AMfyaOzt_ki2HxC1n9Ap9i_usuyxwR4JvlL9Rjvcqf6I_TDIRNSOO99CfSeZRL9igl8t97cIDzc2xEMy52sKI7q5VH-TEKsBv3g/s320/WhatsApp%20Image%202026-02-01%20at%206.14.18%20AM.jpeg'
             alt='Additional Room View' />
         </div>
         <div class='room-content-dark'>
@@ -3465,7 +3572,8 @@
               <span>Pre-Order Required</span>
             </div>
           </div>
-          <a href='#contact' class='meal-cta'>Request Chef Service</a>
+          <a href='https://wa.me/94778626300?text=Hi%2C%20I%20would%20like%20to%20request%20Chef%20Service%20at%20Villa%20Octopus'
+            target='_blank' class='meal-cta'>Request Chef Service</a>
         </div>
       </div>
     </div>
